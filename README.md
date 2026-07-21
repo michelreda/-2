@@ -1,392 +1,4 @@
-SmartKitchenBuilder V1.0 Professional
-الشاشة الرئيسية (Dashboard)
-┌─────────────────────────────────────────────────────────────────────────┐
-│ SmartKitchenBuilder Professional V1.0                           🔔 👤 ⚙ │
-├───────────────┬─────────────────────────────────────────────────────────┤
-│ 📁 Projects   │                     Dashboard                           │
-│ 🏠 Kitchen    │---------------------------------------------------------│
-│ 👔 Dressing   │  المشاريع       العملاء       الأرباح      المواد       │
-│ 🚿 Bathroom   │     18             52          1,250,000      486        │
-│ 🪵 Materials  │---------------------------------------------------------│
-│ 🔩 Hardware   │  آخر المشاريع                                   الرسم   │
-│ 📦 Library    │                                               البياني   │
-│ 💰 Pricing    │---------------------------------------------------------│
-│ 📋 BOM        │  Quick Actions                                 الحالة   │
-│ 📄 Reports    │  [+ مشروع] [+ مطبخ] [+ عرض سعر] [+ تقرير]              │
-│ ⚙ Settings    │---------------------------------------------------------│
-│ 🔄 Updates    │  آخر النشاطات                                      │
-└───────────────┴─────────────────────────────────────────────────────────┘
-الوحدات الأساسية
-📁 Projects
-
-إدارة جميع المشاريع:
-
-إنشاء مشروع.
-فتح مشروع.
-حفظ تلقائي.
-أرشفة.
-نسخ احتياطي.
-البحث.
-
-كل مشروع يحتوي على:
-
-العميل.
-الهاتف.
-العنوان.
-المقاسات.
-التصميم.
-التسعير.
-ملفات SketchUp.
-ملفات PDF.
-🏠 Kitchen Designer
-
-هو قلب البلجن.
-
-يتضمن:
-
-Base Units
-Wall Units
-Tall Units
-Corner Units
-Island
-Pantry
-Appliances
-Accessories
-
-مع إمكانية السحب والإفلات (Drag & Drop) وتعديل الأبعاد مباشرة.
-
-👔 Dressing Designer
-
-نفس النظام ولكن خاص بـ:
-
-Sliding Doors
-Hinged Doors
-Drawers
-Shelves
-Hanging
-LED
-🚿 Bathroom
-Vanity
-Mirror Cabinet
-Tall Cabinet
-Accessories
-🪵 Materials
-
-قاعدة بيانات كاملة:
-
-MDF
-
-Melamine
-
-Plywood
-
-HPL
-
-PVC
-
-Glass
-
-Aluminium
-
-Natural Wood
-
-ويمكن للمستخدم تعديل الأسعار وإضافة خامات جديدة.
-
-🔩 Hardware
-
-قاعدة بيانات للإكسسوارات:
-
-Blum
-Hettich
-Hafele
-Indaux
-Grass
-Samet
-
-مع إمكانية استيراد الأسعار.
-
-📦 Library
-
-تشمل:
-
-Cabinets
-Handles
-Sinks
-Hobs
-Ovens
-Hoods
-Refrigerators
-Accessories
-
-وتدعم البحث، والتصنيفات، وإضافة مكتبات مخصصة.
-
-💰 Pricing
-
-سيكون المحرك المالي للبلجن:
-
-تكلفة الخامات.
-تكلفة العمالة.
-تكلفة النقل.
-نسبة الهالك.
-هامش الربح.
-الضريبة.
-الخصومات.
-صافي الربح.
-
-كما يدعم أكثر من عملة، مع إمكانية تحديث الأسعار بسهولة.
-
-📋 BOM
-
-يولد تلقائيًا:
-
-ألواح الخشب.
-شرائط PVC.
-المفصلات.
-الأدراج.
-المقابض.
-البراغي.
-الإكسسوارات.
-
-مع تصدير CSV وExcel وPDF.
-
-📄 Reports
-
-إصدار تقارير احترافية:
-
-عرض سعر.
-فاتورة.
-BOM.
-CutList.
-تقارير المشروع.
-تقارير الأرباح.
-
-مع إمكانية إضافة شعار الشركة.
-
-⚙ Settings
-اللغة.
-الوحدات (سم / مم / إنش).
-الشركات المصنعة.
-الألوان.
-إعدادات OpenCutList.
-مسارات الحفظ.
-النسخ الاحتياطي.
-شريط الأدوات العلوي
-
-يتضمن:
-
-New Project
-Open
-Save
-Undo
-Redo
-Auto Layout
-Generate BOM
-Pricing
-Reports
-Render
-Settings
-لوحة الخصائص (Properties)
-
-عند تحديد أي وحدة تظهر خصائصها مباشرة:
-
-العرض.
-الارتفاع.
-العمق.
-الخامة.
-السمك.
-اتجاه الباب.
-نوع المفصلات.
-عدد الأرفف.
-نوع الأدراج.
-المقبض.
-الأرجل.
-الإضاءة.
-
-ويتم تحديث التصميم والتكلفة وBOM فورًا.
-
-AI Assistant
-
-لوحة مخصصة للمساعد الذكي تقوم بـ:
-
-تحليل مساحة الغرفة.
-اقتراح توزيع الوحدات.
-اكتشاف التعارضات.
-اقتراح مثلث الحركة.
-تقدير التكلفة.
-تنبيه المستخدم عند وجود أخطاء في التصميم.
-خطة إصدار SmartKitchenBuilder V1.0 Professional
-
-أقسم المشروع إلى أربع مراحل واضحة:
-
-المرحلة 1: Core (الأساس)
-Loader.
-Dashboard.
-إدارة المشاريع.
-قاعدة البيانات.
-نظام الإعدادات.
-نظام اللغات.
-المرحلة 2: Design
-مكتبة الوحدات.
-Dynamic Components.
-أدوات التصميم.
-Auto Layout.
-أدوات التعديل.
-المرحلة 3: Production
-BOM.
-CutList.
-OpenCutList.
-التسعير.
-التقارير.
-التصدير.
-المرحلة 4: Professional
-AI Assistant.
-التحديثات.
-الترخيص.
-النسخ الاحتياطي.
-تحسين الأداء.
-إصدار النسخة المستقرة.
-
-بهذا الأسلوب سيكون SmartKitchenBuilder V1.0 Professional بلجنًا متكاملًا قابلًا للتوسع، حيث يمكن إضافة وحدات مستقبلية مثل تصميم المطابخ التجارية أو الأثاث المكتبي أو التكامل مع ماكينات CNC دون الحاجة لإعادة بناء النظام من الصفر.
-
-انا هربط جوجل استديو ب جيتهب حلو وهبعتله الملفين الي بعتهولمك
-
-فكرة ممتازة، ودي في رأيي أفضل طريقة لو هتستخدم Google AI Studio كمساعد برمجي.
-
-لكن أنصحك متبعتلوش الملفين فقط، ابعتله مواصفات المشروع كاملة بحيث يشتغل بنفس الرؤية من البداية، مش مجرد يعدل ملفات عشوائيًا.
-
-اعمل Repository جديد على GitHub مثل:
-
-SmartKitchenBuilder-Pro
-
-وارفع فيه:
-
-SmartKitchenBuilder/
-ML_Cabinets_v3.0.4/
-README.md
-ROADMAP.md
-TASKS.md
-ARCHITECTURE.md
-
-ثم استخدم هذا البرومبت مع Google AI Studio:
-
-MASTER PROMPT
-
-أنت مهندس برمجيات Senior متخصص في Ruby وSketchUp API وHtmlDialog وJavaScript.
-
-لدي مشروعان:
-
-SmartKitchenBuilder (النواة الجديدة).
-ML_Cabinets (مكتبة قديمة تحتوي على وظائف كثيرة).
-
-المطلوب ليس دمج المشروعين كما هما.
-
-المطلوب إنشاء مشروع جديد باسم:
-
-SmartKitchenBuilder Professional V1.0
-
-ويكون SmartKitchenBuilder هو النواة الأساسية، بينما يتم إعادة استخدام الأجزاء الجيدة فقط من ML_Cabinets دون نسخ الأكواد القديمة أو إعادة إنتاج الأخطاء.
-
-قواعد مهمة
-لا تكسر أي وظيفة تعمل حاليًا.
-لا تحذف أي ملف إلا إذا كان غير مستخدم.
-أي تعديل يجب أن يكون متوافقًا مع SketchUp 2026.
-استخدم Ruby وHtmlDialog الحديثة.
-افصل منطق العمل عن واجهة المستخدم.
-اجعل الكود Modular وقابلًا للتوسع.
-أضف تعليقات واضحة داخل الكود.
-بعد كل تعديل تأكد من عدم وجود أخطاء.
-المطلوب تنفيذه
-المرحلة الأولى
-تحليل جميع ملفات المشروعين.
-تحديد الملفات المكررة.
-إنشاء تقرير يوضح وظيفة كل ملف.
-تحديد الملفات التي سيتم الاحتفاظ بها.
-المرحلة الثانية
-
-إنشاء الهيكل الجديد:
-
-core/
-ui/
-generators/
-layout/
-pricing/
-bom/
-libraries/
-render/
-export/
-assets/
-المرحلة الثالثة
-
-إنشاء Dashboard احترافي يحتوي على:
-
-Projects
-Kitchen
-Dressing
-Bathroom
-Library
-Materials
-Hardware
-Pricing
-BOM
-Reports
-Settings
-المرحلة الرابعة
-
-إنشاء نظام إدارة مشاريع كامل.
-
-المرحلة الخامسة
-
-إنشاء مكتبة Cabinets قابلة للتوسع.
-
-المرحلة السادسة
-
-تحويل جميع معادلات Excel إلى Ruby بنسبة 100%.
-
-المرحلة السابعة
-
-إنشاء Pricing Engine.
-
-المرحلة الثامنة
-
-إنشاء BOM Engine.
-
-المرحلة التاسعة
-
-دمج OpenCutList.
-
-المرحلة العاشرة
-
-إنشاء Auto Layout Engine.
-
-المرحلة الحادية عشرة
-
-إنشاء AI Assistant.
-
-المرحلة الثانية عشرة
-
-تحسين الأداء.
-
-المرحلة الثالثة عشرة
-
-إصدار نسخة مستقرة باسم:
-
-SmartKitchenBuilder Professional V1.0
-
-أسلوب العمل
-
-لا تقم بتعديل عشرات الملفات في نفس الوقت.
-
-اعمل على مراحل صغيرة.
-
-بعد كل مرحلة:
-
-أصلح الأخطاء.
-اختبر الكود.
-ثم انتقل للمرحلة التالية.
-
-إذا وجدت أكواد قديمة ضعيفة، أعد كتابتها بالكامل بدلًا من ترقيعها.
-
-الهدف النهائي هو إنتاج بلجن احترافي ينافس أفضل إضافات تصميم المطابخ في SketchUp.# ROLE
+# ROLE
 
 You are a Senior Software Architect and Senior Ruby Developer specialized in:
 
@@ -845,7 +457,311 @@ SmartKitchenBuilder Professional V1.0
 
 with clean architecture, professional UI, high performance, modular design, pricing system, BOM engine, OpenCutList integration, AI Assistant and complete documentation.
 
-Never rush.
+Never rush.# SmartKitchenBuilder Professional V1.0
+
+Professional SketchUp Extension for Kitchen, Dressing Room and Bathroom Design.
+
+## Features
+
+- Kitchen Designer
+- Dressing Designer
+- Bathroom Designer
+- Dynamic Cabinets
+- Material Database
+- Hardware Database
+- Pricing Engine
+- BOM Generator
+- Cut List
+- OpenCutList Integration
+- DXF Export
+- CNC Preparation
+- PDF Reports
+- AI Kitchen Assistant
+- Arabic / English
+- RTL / LTR
+- Dark Mode
+
+---
+
+## Project Goals
+
+This project aims to build one of the most professional SketchUp extensions for furniture and kitchen designers.
+
+The plugin should be:
+
+- Fast
+- Stable
+- Modular
+- Easy to maintain
+- Easy to extend
+
+---
+
+## Technologies
+
+- Ruby
+- SketchUp Ruby API
+- HtmlDialog
+- JavaScript
+- Vue.js
+- Tailwind CSS
+- JSON
+
+---
+
+## Project Structure
+
+core/
+
+ui/
+
+generators/
+
+layout/
+
+pricing/
+
+bom/
+
+libraries/
+
+database/
+
+reports/
+
+render/
+
+cam/
+
+ai/
+
+assets/
+
+---
+
+## Development Rules
+
+- Never break existing features.
+- Keep modules independent.
+- Use SOLID principles.
+- Avoid duplicate code.
+- Separate UI from Business Logic.
+- Write clean Ruby code.
+- Keep performance as a priority.
+
+---
+
+## Current Version
+
+SmartKitchenBuilder Professional V1.0 Alpha# SmartKitchenBuilder Professional Roadmap
+
+---
+
+# Phase 1
+
+Core Architecture
+
+Status:
+
+In Progress
+
+Tasks
+
+- Project Loader
+- Core Engine
+- Dashboard
+- Localization
+- Settings
+- Logger
+- File Manager
+
+---
+
+# Phase 2
+
+Project Manager
+
+Tasks
+
+- New Project
+- Save
+- Open
+- Autosave
+- Backup
+- Templates
+
+---
+
+# Phase 3
+
+Kitchen Designer
+
+Tasks
+
+- Base Cabinets
+- Wall Cabinets
+- Tall Cabinets
+- Corner Cabinets
+- Islands
+- Pantry Units
+- Appliances
+
+---
+
+# Phase 4
+
+Dressing Designer
+
+Tasks
+
+- Sliding
+- Hinged
+- Drawers
+- Shelves
+- LED
+
+---
+
+# Phase 5
+
+Bathroom Designer
+
+Tasks
+
+- Vanity
+- Mirror
+- Tall Cabinets
+
+---
+
+# Phase 6
+
+Material Database
+
+Tasks
+
+- MDF
+- Melamine
+- HPL
+- PVC
+- Glass
+- Aluminium
+- Wood
+
+---
+
+# Phase 7
+
+Hardware Database
+
+Tasks
+
+- Hinges
+- Drawer Slides
+- Handles
+- Legs
+- Accessories
+
+---
+
+# Phase 8
+
+Pricing Engine
+
+Tasks
+
+- Material Cost
+- Labor
+- Waste
+- Profit
+- Tax
+- Discount
+
+---
+
+# Phase 9
+
+BOM Engine
+
+Tasks
+
+- Panel List
+- PVC
+- Hardware
+- Accessories
+- Cut List
+
+---
+
+# Phase 10
+
+Reports
+
+Tasks
+
+- PDF
+- Excel
+- CSV
+- Invoice
+- Quotation
+
+---
+
+# Phase 11
+
+OpenCutList Integration
+
+Tasks
+
+- Material Mapping
+- Automatic Export
+
+---
+
+# Phase 12
+
+CAM
+
+Tasks
+
+- DXF
+- CNC
+- G-Code
+
+---
+
+# Phase 13
+
+AI Assistant
+
+Tasks
+
+- Auto Layout
+- Collision Detection
+- Room Analysis
+- Optimization
+
+---
+
+# Phase 14
+
+Performance
+
+Tasks
+
+- Lazy Loading
+- Cache
+- Memory Optimization
+
+---
+
+# Phase 15
+
+Stable Release
+
+Version
+
+SmartKitchenBuilder Professional V1.0 Stable
 
 Quality is more important than speed.
 
