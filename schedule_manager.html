@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cabinet Schedule Manager</title>
+    <link rel="stylesheet" href="../shared/fonts/inter.css" />
+    <link rel="stylesheet" href="../shared/design-system.css" />
+    <link rel="stylesheet" href="./schedule_manager.css" />
+  </head>
+  <body>
+    <div class="sm-container">
+      <div id="license-banner" class="ml-license-banner" hidden>
+        <span id="license-banner-text"></span>
+        <button
+          class="ml-license-banner__link"
+          id="license-banner-btn"
+          type="button"
+        >
+          Activate License
+        </button>
+      </div>
+      <!-- ── Header ─────────────────────────────────────────────── -->
+      <header class="sm-header">
+        <div class="sm-header-left">
+          <img
+            class="dialog-logo"
+            src="../../icons/logo.png"
+            alt="ML Cabinets"
+          />
+          <h1 class="sm-title">Cabinet Schedule Manager</h1>
+        </div>
+        <div class="sm-header-actions">
+          <button
+            class="btn btn-ghost sm-btn-icon"
+            id="filtersBtn"
+            title="Active filters"
+          >
+            <i class="sm-icon">&#9660;</i> Filters
+            <span class="sm-filter-badge" id="filterBadge" style="display: none"
+              >0</span
+            >
+          </button>
+          <button
+            class="btn btn-ghost sm-btn-icon"
+            id="clearAllFiltersBtn"
+            title="Clear all filters"
+            style="display: none"
+          >
+            <i class="sm-icon">&#10005;</i> Clear All
+          </button>
+          <button
+            class="btn btn-ghost sm-btn-icon"
+            id="densityBtn"
+            title="Row density"
+          >
+            <i class="sm-icon">&#9776;</i> Density
+          </button>
+          <button
+            class="btn btn-ghost sm-btn-icon"
+            id="columnsBtn"
+            title="Column visibility"
+          >
+            <i class="sm-icon">&#9881;</i> Columns
+          </button>
+          <button
+            class="btn btn-secondary"
+            id="refreshBtn"
+            title="Refresh data"
+          >
+            <i class="sm-icon">&#8635;</i> Refresh
+          </button>
+          <button
+            class="btn btn-primary"
+            id="exportBtn"
+            title="Export schedule"
+          >
+            <i class="sm-icon">&#8595;</i> Export
+          </button>
+        </div>
+      </header>
+
+      <!-- ── Stats Cards ─────────────────────────────────────────── -->
+      <div class="sm-stats">
+        <div class="sm-stat-card">
+          <div class="sm-stat-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="1" />
+              <line x1="12" y1="3" x2="12" y2="21" />
+              <circle cx="8.5" cy="12" r="1" fill="currentColor" />
+              <circle cx="15.5" cy="12" r="1" fill="currentColor" />
+            </svg>
+          </div>
+          <div class="sm-stat-body">
+            <div class="sm-stat-label" id="totalCabinetsLabel">
+              TOTAL CABINETS
+            </div>
+            <div class="sm-stat-value" id="totalCabinets">0</div>
+          </div>
+        </div>
+        <div class="sm-stat-card">
+          <div class="sm-stat-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="3" y="3" width="7" height="7" rx="1" />
+              <rect x="14" y="3" width="7" height="7" rx="1" />
+              <rect x="3" y="14" width="7" height="7" rx="1" />
+              <rect x="14" y="14" width="7" height="7" rx="1" />
+            </svg>
+          </div>
+          <div class="sm-stat-body">
+            <div class="sm-stat-label" id="uniqueConfigsLabel">
+              UNIQUE CONFIGURATIONS
+            </div>
+            <div class="sm-stat-value" id="uniqueConfigs">0</div>
+          </div>
+        </div>
+        <div class="sm-stat-card">
+          <div class="sm-stat-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="12" y1="1" x2="12" y2="23" />
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+            </svg>
+          </div>
+          <div class="sm-stat-body">
+            <div class="sm-stat-label" id="totalValueLabel">TOTAL VALUE</div>
+            <div class="sm-stat-value" id="totalValue">$0.00</div>
+          </div>
+        </div>
+        <div class="sm-stat-card">
+          <div class="sm-stat-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+          </div>
+          <div class="sm-stat-body">
+            <div class="sm-stat-label">GENERATED</div>
+            <div class="sm-stat-value" id="generatedTime">—</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Client Information (collapsible) ───────────────────── -->
+      <div class="sm-client-section">
+        <div class="sm-client-header" id="clientInfoToggle">
+          <div class="sm-client-title">
+            <span class="sm-client-icon">&#128100;</span>
+            <h3>Client Information</h3>
+          </div>
+          <span class="sm-toggle-icon collapsed" id="clientToggleIcon"
+            >&#9660;</span
+          >
+        </div>
+        <div class="sm-client-body collapsed" id="clientInfoContent">
+          <div class="sm-client-grid">
+            <div class="sm-client-field">
+              <label for="clientName">Name</label>
+              <input
+                type="text"
+                id="clientName"
+                placeholder="Enter client name"
+              />
+            </div>
+            <div class="sm-client-field">
+              <label for="clientMobile">Mobile</label>
+              <input
+                type="tel"
+                id="clientMobile"
+                placeholder="Enter mobile number"
+              />
+            </div>
+            <div class="sm-client-field">
+              <label for="clientEmail">Email</label>
+              <input
+                type="email"
+                id="clientEmail"
+                placeholder="Enter email address"
+              />
+            </div>
+            <div class="sm-client-field sm-client-full">
+              <label for="clientAddress">Address</label>
+              <textarea
+                id="clientAddress"
+                rows="2"
+                placeholder="Enter full address"
+              ></textarea>
+            </div>
+          </div>
+          <div class="sm-client-actions">
+            <button class="btn btn-secondary" id="saveClientInfoBtn">
+              &#128190; Save Client Info
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Table ───────────────────────────────────────────────── -->
+      <div class="sm-table-wrapper">
+        <div class="sm-table-container">
+          <table class="sm-table" id="scheduleTable">
+            <thead>
+              <tr id="tableHeader"></tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+          </table>
+
+          <div class="sm-empty-state" id="emptyState" style="display: none">
+            <div class="sm-empty-icon">&#128203;</div>
+            <h3>No Cabinets Found</h3>
+            <p>No ML Cabinets were found in the current model.</p>
+          </div>
+
+          <div class="sm-loading-state" id="loadingState">
+            <div class="sm-spinner"></div>
+            <p>Loading cabinet schedule…</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Footer ──────────────────────────────────────────────── -->
+      <footer class="sm-footer">
+        <div class="sm-footer-left">
+          <span id="summaryText">0 configurations, 0 total cabinets</span>
+        </div>
+        <div class="sm-footer-right">
+          <strong>TOTAL:</strong>
+          <span id="footerQuantity">0</span>
+          <span class="sm-sep">|</span>
+          <strong id="footerTotal">$0.00</strong>
+        </div>
+      </footer>
+    </div>
+    <!-- /.sm-container -->
+
+    <!-- ── Export Modal ────────────────────────────────────────── -->
+    <div class="sm-modal" id="exportModal" style="display: none">
+      <div class="sm-modal-content">
+        <div class="sm-modal-header">
+          <h2>Export Cabinet Schedule</h2>
+          <button class="sm-modal-close" id="exportModalClose">&times;</button>
+        </div>
+        <div class="sm-modal-body">
+          <div class="sm-format-options">
+            <label class="sm-format-option">
+              <input type="radio" name="exportFormat" value="csv" checked />
+              <div class="sm-format-card">
+                <h3>CSV Format</h3>
+                <p>Spreadsheet compatible</p>
+                <ul>
+                  <li>Opens in Excel &amp; Google Sheets</li>
+                  <li>Easy data manipulation</li>
+                  <li>Lightweight file size</li>
+                </ul>
+              </div>
+            </label>
+            <label class="sm-format-option">
+              <input type="radio" name="exportFormat" value="html" />
+              <div class="sm-format-card">
+                <h3>HTML Format</h3>
+                <p>Printable web page</p>
+                <ul>
+                  <li>Professional print layout</li>
+                  <li>Share via email / web</li>
+                  <li>Includes totals row</li>
+                </ul>
+              </div>
+            </label>
+          </div>
+          <div class="sm-export-note">
+            <strong>Note:</strong> Export includes only visible columns with
+            current filters applied.
+          </div>
+        </div>
+        <div class="sm-modal-footer">
+          <button class="btn btn-ghost" id="exportCancelBtn">Cancel</button>
+          <button class="btn btn-primary" id="exportConfirmBtn">Export</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Column Visibility Modal ─────────────────────────────── -->
+    <div class="sm-modal" id="columnsModal" style="display: none">
+      <div class="sm-modal-content sm-modal-sm">
+        <div class="sm-modal-header">
+          <h2>Column Visibility</h2>
+          <button class="sm-modal-close" id="columnsModalClose">&times;</button>
+        </div>
+        <div class="sm-modal-body">
+          <div class="sm-preset-btns">
+            <button class="sm-preset-btn" data-preset="minimal">Minimal</button>
+            <button class="sm-preset-btn" data-preset="standard">
+              Standard
+            </button>
+            <button class="sm-preset-btn" data-preset="all">All Details</button>
+          </div>
+          <div class="sm-columns-list" id="columnsList"></div>
+        </div>
+        <div class="sm-modal-footer">
+          <button class="btn btn-ghost" id="columnsResetBtn">
+            Reset to Default
+          </button>
+          <button class="btn btn-primary" id="columnsSaveBtn">Save</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Row Density Modal ────────────────────────────────────── -->
+    <div class="sm-modal" id="densityModal" style="display: none">
+      <div class="sm-modal-content sm-modal-sm">
+        <div class="sm-modal-header">
+          <h2>Row Density</h2>
+          <button class="sm-modal-close" id="densityModalClose">&times;</button>
+        </div>
+        <div class="sm-modal-body">
+          <div class="sm-density-options">
+            <label class="sm-density-option">
+              <input type="radio" name="density" value="compact" />
+              <div class="sm-density-card">
+                <strong>Compact</strong>
+                <p>More rows visible</p>
+              </div>
+            </label>
+            <label class="sm-density-option">
+              <input type="radio" name="density" value="normal" checked />
+              <div class="sm-density-card">
+                <strong>Normal</strong>
+                <p>Balanced spacing</p>
+              </div>
+            </label>
+            <label class="sm-density-option">
+              <input type="radio" name="density" value="comfortable" />
+              <div class="sm-density-card">
+                <strong>Comfortable</strong>
+                <p>Extra spacing</p>
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="sm-modal-footer">
+          <button class="btn btn-primary" id="densitySaveBtn">Apply</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Filter Modal ─────────────────────────────────────────── -->
+    <div class="sm-modal" id="filterModal" style="display: none">
+      <div class="sm-modal-content sm-modal-sm">
+        <div class="sm-modal-header">
+          <h2 id="filterModalTitle">Filter: Column</h2>
+          <button class="sm-modal-close" id="filterModalClose">&times;</button>
+        </div>
+        <div class="sm-modal-body">
+          <div id="filterModalContent"></div>
+        </div>
+        <div class="sm-modal-footer">
+          <button class="btn btn-ghost" id="filterClearBtn">Clear</button>
+          <button class="btn btn-primary" id="filterApplyBtn">Apply</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Toast Notification ───────────────────────────────────── -->
+    <div class="sm-notification" id="notification" style="display: none">
+      <span id="notificationText"></span>
+    </div>
+
+    <script src="./schedule_manager.js"></script>
+  </body>
+</html>

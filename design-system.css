@@ -1,0 +1,994 @@
+/* =============================================================================
+   ML Cabinets / Doors / Kitchens — Custom Design System
+   shared/design-system.css
+   -----------------------------------------------------------------------------
+   This is the single source of truth for all design tokens and base components.
+   Rules:
+     - All tokens use the --ml- prefix.
+     - Dialog-level CSS files import nothing from here — they reference variables.
+     - Never hardcode a color, spacing, or radius value in a dialog CSS file;
+       always use the corresponding --ml- token.
+     - This file is ours — read it, extend it, refactor it freely.
+   ============================================================================= */
+
+@import "./fonts/inter.css";
+
+/* ---------------------------------------------------------------------------
+   1. TOKENS
+   --------------------------------------------------------------------------- */
+
+:root {
+  /* --- Brand --- */
+  --ml-primary: #1a6fc4;
+  --ml-primary-hover: #155da3;
+  --ml-primary-active: #104e8e;
+  --ml-primary-subtle: rgba(26, 111, 196, 0.2);
+
+  /* --- Neutrals --- */
+  --ml-bg: #ffffff;
+  --ml-bg-subtle: #e9ebf0;
+  --ml-bg-muted: #dee1e7;
+  --ml-border: #d4d8df;
+  --ml-border-strong: #c4cad4;
+
+  /* --- Text --- */
+  --ml-text: #1c2026;
+  --ml-text-muted: #444953;
+  --ml-text-disabled: #9da5b0;
+
+  /* --- Feedback --- */
+  --ml-danger: #d0392b;
+  --ml-danger-hover: #b5301e;
+  --ml-danger-subtle: rgba(208, 57, 43, 0.08);
+  --ml-success: #27a058;
+  --ml-warning: #d97706;
+
+  /* --- Border radius --- */
+  --ml-radius-sm: 3px;
+  --ml-radius: 6px;
+  --ml-radius-lg: 10px;
+  --ml-radius-pill: 999px;
+
+  /* --- Shadows --- */
+  --ml-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --ml-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+  --ml-shadow-lg:
+    0 10px 30px rgba(0, 0, 0, 0.12), 0 4px 10px rgba(0, 0, 0, 0.07);
+
+  /* --- Spacing (4px grid) --- */
+  --ml-space-1: 4px;
+  --ml-space-2: 8px;
+  --ml-space-3: 12px;
+  --ml-space-4: 16px;
+  --ml-space-5: 20px;
+  --ml-space-6: 24px;
+
+  /* --- Typography --- */
+  --ml-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ml-font-size: 13px;
+  --ml-font-size-sm: 11px;
+  --ml-font-size-lg: 15px;
+  --ml-line-height: 1.5;
+
+  /* --- Transitions --- */
+  --ml-transition: 0.15s ease;
+}
+
+/* ---------------------------------------------------------------------------
+   2. RESET
+   --------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--ml-font);
+  font-size: var(--ml-font-size);
+  line-height: var(--ml-line-height);
+  color: var(--ml-text);
+  background: var(--ml-bg);
+  overflow: hidden; /* dialog manages its own scroll regions */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--ml-primary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+.lucide {
+  width: 16px;
+  min-width: 16px;
+  height: 16px;
+}
+
+/* ---------------------------------------------------------------------------
+   3. DIALOG SHELL
+   --------------------------------------------------------------------------- */
+
+.dialog-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header */
+.dialog-header {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--ml-space-2);
+  padding: var(--ml-space-2) var(--ml-space-3);
+  border-bottom: 1px solid var(--ml-border);
+  background: var(--ml-bg-subtle);
+  user-select: none;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--ml-space-2);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.dialog-title {
+  font-weight: 600;
+  font-size: 14px;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dialog-header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--ml-space-1);
+}
+
+.dialog-logo {
+  width: 36px;
+  height: 36px;
+}
+
+/* Body */
+.dialog-body {
+  flex: 1 1 auto;
+  overflow: hidden;
+  padding: var(--ml-space-2);
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  border: 1px solid var(--ml-border);
+  border-radius: var(--ml-radius);
+  padding: var(--ml-space-2);
+  min-height: 0;
+  overflow-y: auto;
+}
+
+aside {
+  background-color: var(--ml-bg-subtle);
+  list-style: none;
+}
+
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: flex;
+  height: 100%;
+  min-height: 0;
+  flex-direction: column;
+  gap: var(--ml-space-2);
+}
+
+/* Footer */
+.dialog-footer {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--ml-space-2);
+  padding: var(--ml-space-2) var(--ml-space-3);
+  border-top: 1px solid var(--ml-border);
+  background: var(--ml-bg-subtle);
+}
+
+/* ---------------------------------------------------------------------------
+   4. BUTTONS
+   --------------------------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--ml-space-1);
+  padding: 5px var(--ml-space-3);
+  font-family: var(--ml-font);
+  font-size: var(--ml-font-size);
+  font-weight: 500;
+  line-height: var(--ml-line-height);
+  border-radius: var(--ml-radius);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition:
+    background var(--ml-transition),
+    border-color var(--ml-transition),
+    box-shadow var(--ml-transition);
+  white-space: nowrap;
+  user-select: none;
+}
+.btn:focus-visible {
+  outline: 2px solid var(--ml-primary);
+  outline-offset: 2px;
+}
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Primary */
+.btn-primary {
+  background: var(--ml-primary);
+  color: #fff;
+  border-color: var(--ml-primary);
+}
+.btn-primary:hover:not(:disabled) {
+  background: var(--ml-primary-hover);
+  border-color: var(--ml-primary-hover);
+}
+.btn-primary:active:not(:disabled) {
+  background: var(--ml-primary-active);
+  border-color: var(--ml-primary-active);
+}
+
+/* Ghost (secondary) */
+.btn-ghost {
+  background: transparent;
+  color: var(--ml-text-muted);
+  border-color: var(--ml-border);
+}
+.btn-ghost:hover:not(:disabled) {
+  background: var(--ml-bg-muted);
+  border-color: var(--ml-border-strong);
+  color: var(--ml-text);
+}
+.btn-ghost:active:not(:disabled) {
+  background: var(--ml-border);
+}
+
+/* Danger */
+.btn-danger {
+  background: var(--ml-danger);
+  color: #fff;
+  border-color: var(--ml-danger);
+}
+.btn-danger:hover:not(:disabled) {
+  background: var(--ml-danger-hover);
+  border-color: var(--ml-danger-hover);
+}
+
+/* Icon-only */
+.btn-icon {
+  background: transparent;
+  border: none;
+  border-radius: var(--ml-radius);
+  color: var(--ml-text-muted);
+  cursor: pointer;
+  transition:
+    background var(--ml-transition),
+    color var(--ml-transition);
+}
+.btn-icon:hover {
+  background: var(--ml-bg-muted);
+  color: var(--ml-text);
+}
+.btn-icon:active {
+  background: var(--ml-border);
+}
+
+/* ---------------------------------------------------------------------------
+   5. FORM CONTROLS
+   --------------------------------------------------------------------------- */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ml-space-1);
+  padding: var(--ml-space-2);
+  background-color: var(--ml-bg-subtle);
+  border: 1px solid var(--ml-border);
+  border-radius: var(--ml-radius);
+}
+
+.form-group .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: var(--ml-space-2);
+  border-bottom: 1px solid var(--ml-border);
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--ml-space-1);
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: var(--ml-space-2);
+  padding: var(--ml-space-1);
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--ml-border);
+  border-radius: var(--ml-radius);
+  background: var(--ml-bg);
+  cursor: pointer;
+}
+
+label {
+  flex: 0 0 180px;
+  font-size: var(--ml-font-size-sm);
+  font-weight: 600;
+  color: var(--ml-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.input,
+select,
+textarea {
+  width: 100%;
+  padding: 5px var(--ml-space-2);
+  font-family: var(--ml-font);
+  font-size: var(--ml-font-size);
+  line-height: var(--ml-line-height);
+  color: var(--ml-text);
+  background: var(--ml-bg);
+  border: 1px solid var(--ml-border);
+  border-radius: var(--ml-radius);
+  transition:
+    border-color var(--ml-transition),
+    box-shadow var(--ml-transition);
+  -webkit-appearance: none;
+  appearance: none;
+}
+.input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--ml-primary);
+  box-shadow: 0 0 0 3px var(--ml-primary-subtle);
+}
+.input:disabled,
+select:disabled,
+textarea:disabled {
+  background: var(--ml-bg-subtle);
+  color: var(--ml-text-disabled);
+  cursor: not-allowed;
+}
+.input.is-error,
+select.is-error {
+  border-color: var(--ml-danger);
+  box-shadow: 0 0 0 3px var(--ml-danger-subtle);
+}
+
+select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath fill='%235c6370' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  padding-right: 28px;
+}
+
+.field-error {
+  font-size: var(--ml-font-size-sm);
+  color: var(--ml-danger);
+  margin-top: 2px;
+}
+.field-hint {
+  font-size: var(--ml-font-size-sm);
+  color: var(--ml-text-muted);
+  margin-top: 2px;
+}
+
+.separator {
+  min-height: 2px;
+  background: var(--ml-border);
+  margin: var(--ml-space-2) 0;
+  border-radius: var(--ml-radius);
+}
+
+/* ---------------------------------------------------------------------------
+   6. SEARCH
+   --------------------------------------------------------------------------- */
+
+.search-wrapper {
+  position: relative;
+}
+.search-wrapper .search-icon {
+  position: absolute;
+  left: var(--ml-space-2);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--ml-text-muted);
+  pointer-events: none;
+  font-size: 13px;
+}
+.search-input {
+  width: 100%;
+  padding: 5px var(--ml-space-2) 5px 30px;
+  font-family: var(--ml-font);
+  font-size: var(--ml-font-size);
+  color: var(--ml-text);
+  background: var(--ml-bg);
+  border: 1px solid var(--ml-border);
+  border-radius: var(--ml-radius-pill);
+  transition:
+    border-color var(--ml-transition),
+    box-shadow var(--ml-transition);
+}
+.search-input:focus {
+  outline: none;
+  border-color: var(--ml-primary);
+  box-shadow: 0 0 0 3px var(--ml-primary-subtle);
+}
+.search-input::placeholder {
+  color: var(--ml-text-disabled);
+}
+
+/* ---------------------------------------------------------------------------
+   7. NAV PILLS (sidebar tabs)
+   --------------------------------------------------------------------------- */
+
+.nav-link {
+  display: block;
+  padding: var(--ml-space-1) var(--ml-space-2);
+  border-radius: var(--ml-radius);
+  margin-bottom: var(--ml-space-2);
+  cursor: pointer;
+  font-weight: 400;
+  color: var(--ml-text);
+  text-decoration: none;
+  transition: background var(--ml-transition);
+  user-select: none;
+}
+.nav-link:hover:not(.active) {
+  background: var(--ml-bg);
+}
+.nav-link.active {
+  font-weight: 600;
+  background: var(--ml-primary);
+  color: #fff;
+}
+
+/* ---------------------------------------------------------------------------
+   8. CARDS
+   --------------------------------------------------------------------------- */
+
+.card {
+  background: var(--ml-bg);
+  border: 1px solid var(--ml-border);
+  border-radius: var(--ml-radius);
+  padding: var(--ml-space-3);
+  box-shadow: var(--ml-shadow-sm);
+  transition:
+    box-shadow var(--ml-transition),
+    border-color var(--ml-transition);
+}
+.card:hover {
+  box-shadow: var(--ml-shadow);
+  border-color: var(--ml-border-strong);
+}
+.card.selected {
+  border-color: var(--ml-primary);
+  box-shadow: 0 0 0 3px var(--ml-primary-subtle);
+}
+
+/* ---------------------------------------------------------------------------
+   9. BADGE
+   --------------------------------------------------------------------------- */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 7px;
+  font-size: var(--ml-font-size-sm);
+  font-weight: 600;
+  border-radius: var(--ml-radius-pill);
+  background: var(--ml-bg-muted);
+  color: var(--ml-text-muted);
+  white-space: nowrap;
+}
+.badge-primary {
+  background: var(--ml-primary-subtle);
+  color: var(--ml-primary);
+}
+.badge-danger {
+  background: var(--ml-danger-subtle);
+  color: var(--ml-danger);
+}
+
+/* ---------------------------------------------------------------------------
+   10. DIVIDER
+   --------------------------------------------------------------------------- */
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--ml-border);
+  margin: var(--ml-space-3) 0;
+}
+
+/* ---------------------------------------------------------------------------
+   11. SCROLLBAR (Chromium-only)
+   --------------------------------------------------------------------------- */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--ml-border-strong);
+  border-radius: var(--ml-radius-pill);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ml-text-disabled);
+}
+
+/* ---------------------------------------------------------------------------
+   12. UTILITY
+   --------------------------------------------------------------------------- */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.text-muted {
+  color: var(--ml-text-muted);
+}
+.text-danger {
+  color: var(--ml-danger);
+}
+.text-success {
+  color: var(--ml-success);
+}
+.text-sm {
+  font-size: var(--ml-font-size-sm);
+}
+.fw-600 {
+  font-weight: 600;
+}
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ---------------------------------------------------------------------------
+   13. SEGMENTED CONTROL
+   --------------------------------------------------------------------------- */
+
+.seg-control {
+  display: flex;
+  background: var(--ml-bg-subtle);
+  border: 1px solid var(--ml-border);
+  border-radius: var(--ml-radius);
+  padding: 3px;
+  gap: 3px;
+}
+
+.seg-btn {
+  flex: 1;
+  padding: 5px var(--ml-space-3);
+  font-family: var(--ml-font);
+  font-size: var(--ml-font-size);
+  font-weight: 500;
+  border: none;
+  border-radius: var(--ml-radius-sm);
+  background: transparent;
+  color: var(--ml-text-muted);
+  cursor: pointer;
+  transition:
+    background var(--ml-transition),
+    color var(--ml-transition);
+  user-select: none;
+}
+
+.seg-btn.active {
+  background: var(--ml-primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+.seg-btn:hover:not(.active) {
+  background: var(--ml-bg-muted);
+  color: var(--ml-text);
+}
+
+/* ---------------------------------------------------------------------------
+   14. FILTER PILLS
+   --------------------------------------------------------------------------- */
+
+.filter-pills {
+  display: flex;
+  align-items: center;
+  gap: var(--ml-space-1);
+  flex-wrap: wrap;
+}
+
+.filter-pill {
+  padding: 2px var(--ml-space-2);
+  font-family: var(--ml-font);
+  font-size: var(--ml-font-size-sm);
+  font-weight: 500;
+  border: 1px solid var(--ml-border);
+  border-radius: var(--ml-radius-pill);
+  background: var(--ml-bg);
+  color: var(--ml-text-muted);
+  cursor: pointer;
+  transition:
+    background var(--ml-transition),
+    border-color var(--ml-transition),
+    color var(--ml-transition);
+  user-select: none;
+}
+
+.filter-pill.active {
+  background: var(--ml-primary);
+  border-color: var(--ml-primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+.filter-pill:hover:not(.active) {
+  border-color: var(--ml-border-strong);
+  color: var(--ml-text);
+}
+
+/* ---------------------------------------------------------------------------
+   15. PRESET GRID & CARD
+   --------------------------------------------------------------------------- */
+
+.preset-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--ml-space-4);
+}
+
+/* Card container */
+.preset-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--ml-bg);
+  border: 1px solid var(--ml-border);
+  border-radius: var(--ml-radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  max-width: 200px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+  user-select: none;
+}
+
+.preset-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--ml-shadow-lg);
+  border-color: var(--ml-primary);
+}
+
+.preset-card:active {
+  transform: translateY(-1px);
+  box-shadow: var(--ml-shadow);
+}
+
+.preset-card.selected {
+  border: 3px solid var(--ml-primary);
+  box-shadow: 0 0 0 3px var(--ml-primary-subtle);
+}
+
+/* Delete button — frosted glass, top-right, revealed on hover */
+.preset-card__delete {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 2;
+  width: 22px;
+  height: 22px;
+  border: none;
+  border-radius: var(--ml-radius);
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--ml-danger);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition:
+    opacity var(--ml-transition),
+    background var(--ml-transition);
+  backdrop-filter: blur(4px);
+}
+
+.preset-card:hover .preset-card__delete {
+  opacity: 1;
+}
+
+.preset-card__delete:hover {
+  background: var(--ml-danger);
+  color: #fff;
+}
+
+/* Thumbnail */
+.preset-card__thumb {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: var(--ml-bg-subtle);
+  border-bottom: 1px solid var(--ml-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.preset-card__thumb img {
+  width: 100%;
+  height: 100%;
+  padding: var(--ml-space-2);
+  object-fit: contain;
+}
+
+/* Info section (name + optional dims + optional meta) */
+.preset-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--ml-space-2);
+}
+
+.preset-card__name {
+  font-weight: 600;
+  font-size: var(--ml-font-size);
+  color: var(--ml-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.preset-card__dims {
+  font-size: var(--ml-font-size-sm);
+  color: var(--ml-text-muted);
+}
+
+.preset-card__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--ml-space-1);
+  margin-top: 2px;
+}
+
+/* Simple label variant (single dark bar — used by preset modal) */
+.preset-card__label {
+  font-size: var(--ml-font-size-sm);
+  font-weight: 600;
+  color: var(--ml-text);
+  padding: 4px var(--ml-space-2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-top: 1px solid var(--ml-border);
+  background: var(--ml-bg-subtle);
+  text-align: center;
+}
+
+/* Thumbnail placeholder modifier */
+.preset-card__thumb--placeholder {
+  color: var(--ml-text-disabled);
+}
+
+/* =============================================================================
+   License Banner Component
+   Used in all major dialogs to show trial / expired / education status.
+   ============================================================================= */
+
+.ml-license-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 14px;
+  font-size: var(--ml-font-size-sm);
+  font-weight: 500;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+.ml-license-banner[hidden] {
+  display: none;
+}
+
+.ml-license-banner--trial {
+  background: #fef3c7;
+  color: #92400e;
+  border-bottom: 1px solid #fcd34d;
+}
+
+.ml-license-banner--expired {
+  background: var(--ml-danger-subtle);
+  color: var(--ml-danger);
+  border-bottom: 1px solid rgba(208, 57, 43, 0.2);
+}
+
+.ml-license-banner--education {
+  background: var(--ml-primary-subtle);
+  color: var(--ml-primary);
+  border-bottom: 1px solid rgba(26, 111, 196, 0.2);
+}
+
+.ml-license-banner--connectivity {
+  background: #fffbeb;
+  color: #78350f;
+  border-bottom: 1px solid #fde68a;
+}
+
+.ml-license-banner__link {
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+  white-space: nowrap;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  font-weight: 600;
+}
+
+.ml-license-banner__link:hover {
+  opacity: 0.8;
+}
+
+/* Source / status badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 1px 6px;
+  border-radius: var(--ml-radius-pill);
+  line-height: 1.6;
+}
+
+.badge-builtin {
+  background: var(--ml-primary-subtle);
+  color: var(--ml-primary);
+}
+
+.badge-user {
+  background: rgba(39, 160, 88, 0.1);
+  color: var(--ml-success);
+}
+
+/* ---------------------------------------------------------------------------
+   Preset Modal
+   --------------------------------------------------------------------------- */
+
+.preset-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.preset-modal-overlay.hidden {
+  display: none;
+}
+
+.preset-modal {
+  background: var(--ml-bg);
+  border: 1px solid var(--ml-border);
+  border-radius: var(--ml-radius-lg);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.18),
+    0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 520px;
+  max-width: 96vw;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.preset-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--ml-space-3) var(--ml-space-4);
+  border-bottom: 1px solid var(--ml-border);
+  flex: 0 0 auto;
+}
+
+.preset-modal__title {
+  font-size: var(--ml-font-size);
+  font-weight: 600;
+  color: var(--ml-text);
+}
+
+.preset-modal__filters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ml-space-1);
+  padding: var(--ml-space-2) var(--ml-space-4);
+  border-bottom: 1px solid var(--ml-border);
+  flex: 0 0 auto;
+}
+
+.preset-modal__body {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: var(--ml-space-3) var(--ml-space-4);
+}
+
+.preset-modal__footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--ml-space-2);
+  padding: var(--ml-space-3) var(--ml-space-4);
+  border-top: 1px solid var(--ml-border);
+  flex: 0 0 auto;
+}
+
+.preset-modal__empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: var(--ml-space-6);
+  color: var(--ml-text-muted);
+  font-size: var(--ml-font-size-sm);
+}

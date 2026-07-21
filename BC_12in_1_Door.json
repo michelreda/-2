@@ -1,0 +1,104 @@
+{
+  "unit": "in",
+  "type": "base",
+  "name": "BC_12in_1_Door",
+  "price": 0,
+  "width": 12,
+  "height": 34.5,
+  "depth": 24,
+  "height_from_floor": 0,
+  "corner_type": "l-shaped",
+  "accessible_side": "right",
+  "toe_kick": {
+    "enabled": true,
+    "height": 4,
+    "depth": 3,
+    "skirting": true,
+    "create_legs": false,
+    "flat_sides": true,
+    "flat_back": true,
+    "legs_preset": "LG-801"
+  },
+  "construction": {
+    "top_panel": "closed",
+    "base_panel": "closed",
+    "side_panels": "inset",
+    "panel_thickness": 0.75,
+    "back_panel_type": "stretchers",
+    "back_panel_thickness": 0.25,
+    "back_panel_recess": 0,
+    "stretcher_count": 2,
+    "stretcher_width": 5,
+    "overlay_type": "full",
+    "overlay_clearance": 0.0625
+  },
+  "groups": [
+    {
+      "type": "vertical-group",
+      "height": 0,
+      "items": [
+        {
+          "type": "door-hinge-left",
+          "height": 0,
+          "shelves": 1,
+          "material_id": null,
+          "material_grain": "horizontal",
+          "shape_id": null,
+          "handle_id": null,
+          "handle_offset_h": 0,
+          "handle_offset_v": 0,
+          "hinges_count": 2,
+          "hinge_top_offset": 0,
+          "hinge_bottom_offset": 0,
+          "opening_amount": 50
+        }
+      ]
+    }
+  ],
+  "doors": {
+    "preset_id": "DW-101",
+    "handle_preset_id": null,
+    "handle_offset_h": 0,
+    "handle_offset_v": 0
+  },
+  "drawers": {
+    "preset_id": "DW-101",
+    "handle_preset_id": null,
+    "handle_offset_h": 0,
+    "handle_offset_v": 0
+  },
+  "panels": {
+    "preset_id": "DW-101"
+  },
+  "materials": {
+    "carcass": {
+      "id": "Alpine_White",
+      "grain": "horizontal"
+    },
+    "panel": {
+      "id": "WD-101",
+      "grain": "horizontal"
+    },
+    "edge": {
+      "id": "MT-W01",
+      "grain": "horizontal"
+    },
+    "door": {
+      "id": "WD-101",
+      "grain": "horizontal"
+    },
+    "drawer": {
+      "id": "WD-101",
+      "grain": "horizontal"
+    },
+    "handle": {
+      "id": "Brushed_Steel",
+      "grain": "horizontal"
+    },
+    "glass": {
+      "id": "MT-G01",
+      "grain": "horizontal"
+    }
+  },
+  "user_created": false
+}

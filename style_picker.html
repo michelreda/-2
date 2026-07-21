@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style Picker — Choose Properties</title>
+    <link rel="stylesheet" href="../shared/fonts/inter.css" />
+    <link rel="stylesheet" href="../shared/design-system.css" />
+    <link rel="stylesheet" href="./style_picker.css" />
+  </head>
+  <body>
+    <div class="dialog-wrapper">
+      <header class="dialog-header">
+        <span class="dialog-title">Style Picker</span>
+        <span id="source-label" class="source-label"></span>
+      </header>
+
+      <main class="dialog-body">
+        <p class="hint-text">
+          Choose which properties to copy from the picked cabinet.
+        </p>
+
+        <!-- General -->
+        <div class="filter-section" data-section="general">
+          <div class="filter-header">
+            <input
+              type="checkbox"
+              class="section-checkbox"
+              title="General"
+              checked
+            />
+            <span class="section-label">General</span>
+            <span class="toggle-icon">&#9662;</span>
+          </div>
+          <div class="filter-body open">
+            <label class="filter-item">
+              <input type="checkbox" data-key="cabinetType" checked />
+              <span>Cabinet Type</span>
+            </label>
+            <label class="filter-item">
+              <input type="checkbox" data-key="dimensions" checked />
+              <span>Dimensions (W × H × D)</span>
+            </label>
+            <label class="filter-item">
+              <input type="checkbox" data-key="heightFromFloor" checked />
+              <span>Height from Floor</span>
+            </label>
+            <label class="filter-item">
+              <input type="checkbox" data-key="toeKick" checked />
+              <span>Toe Kick</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Construction -->
+        <div class="filter-section" data-section="construction">
+          <div class="filter-header">
+            <input
+              type="checkbox"
+              class="section-checkbox"
+              title="Construction"
+              checked
+            />
+            <span class="section-label">Construction</span>
+            <span class="toggle-icon">&#9656;</span>
+          </div>
+          <div class="filter-body">
+            <label class="filter-item">
+              <input type="checkbox" data-key="carcass" checked />
+              <span>Carcass (panels &amp; thickness)</span>
+            </label>
+            <label class="filter-item">
+              <input type="checkbox" data-key="backPanel" checked />
+              <span>Back Panel</span>
+            </label>
+            <label class="filter-item">
+              <input type="checkbox" data-key="overlay" checked />
+              <span>Overlay</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Configuration -->
+        <div class="filter-section" data-section="configuration">
+          <div class="filter-header">
+            <input
+              type="checkbox"
+              class="section-checkbox"
+              title="Configuration"
+              checked
+            />
+            <span class="section-label">Configuration</span>
+            <span class="toggle-icon">&#9656;</span>
+          </div>
+          <div class="filter-body">
+            <label class="filter-item">
+              <input type="checkbox" data-key="configuration" checked />
+              <span>Groups &amp; Items (entire layout)</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Doors -->
+        <div class="filter-section" data-section="doors">
+          <div class="filter-header">
+            <input
+              type="checkbox"
+              class="section-checkbox"
+              title="Doors"
+              checked
+            />
+            <span class="section-label">Doors</span>
+            <span class="toggle-icon">&#9656;</span>
+          </div>
+          <div class="filter-body">
+            <label class="filter-item">
+              <input type="checkbox" data-key="doorShape" checked />
+              <span>Door Shape</span>
+            </label>
+            <label class="filter-item">
+              <input type="checkbox" data-key="doorHandle" checked />
+              <span>Door Handle</span>
+            </label>
+            <label class="filter-item">
+              <input type="checkbox" data-key="doorHandleOffsets" checked />
+              <span>Door Handle Offsets</span>
+            </label>
+            <label class="filter-item">
+              <input type="checkbox" data-key="doorMaterial" checked />
+              <span>Door Material</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Drawers -->
+        <div class="filter-section" data-section="drawers">
+          <div class="filter-header">
+            <input
+              type="checkbox"
+              class="section-checkbox"
+              title="Drawers"
+              checked
+            />
+            <span class="section-label">Drawers</span>
+            <span class="toggle-icon">&#9656;</span>
+          </div>
+          <div class="filter-body">
+            <label class="filter-item">
+              <input type="checkbox" data-key="drawerShape" checked />
+              <span>Drawer Shape</span>
+            </label>
+            <label class="filter-item">
+              <input type="checkbox" data-key="drawerHandle" checked />
+              <span>Drawer Handle</span>
+            </label>
+            <label class="filter-item">
+              <input type="checkbox" data-key="drawerHandleOffsets" checked />
+              <span>Drawer Handle Offsets</span>
+            </label>
+            <label class="filter-item">
+              <input type="checkbox" data-key="drawerMaterial" checked />
+              <span>Drawer Material</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Materials -->
+        <div class="filter-section" data-section="materials">
+          <div class="filter-header">
+            <input
+              type="checkbox"
+              class="section-checkbox"
+              title="Materials"
+              checked
+            />
+            <span class="section-label">Materials</span>
+            <span class="toggle-icon">&#9656;</span>
+          </div>
+          <div class="filter-body">
+            <label class="filter-item">
+              <input type="checkbox" data-key="panelMaterial" checked />
+              <span>Carcass &amp; Edge Material</span>
+            </label>
+            <label class="filter-item">
+              <input type="checkbox" data-key="handleMaterial" checked />
+              <span>Handle Material</span>
+            </label>
+            <label class="filter-item">
+              <input type="checkbox" data-key="glassMaterial" checked />
+              <span>Glass Material</span>
+            </label>
+          </div>
+        </div>
+      </main>
+
+      <footer class="dialog-footer">
+        <button class="btn btn-ghost" id="btn-cancel">Cancel</button>
+        <button class="btn btn-primary" id="btn-apply">Apply</button>
+      </footer>
+    </div>
+    <script src="./style_picker.js"></script>
+  </body>
+</html>

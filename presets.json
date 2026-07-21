@@ -1,0 +1,871 @@
+{
+    "presets":  [
+                    {
+                        "id":  "dd02f2ce-12e0-4d8f-8dfe-01794054c720",
+                        "name":  "BC_30cm_1_Door",
+                        "type":  "cabinet",
+                        "cabinet_type":  "base",
+                        "user_created":  false,
+                        "created_at":  "2026-04-14T23:36:04Z",
+                        "dimensions":  "30.0 x 87.0 x 58.0 cm",
+                        "description":  "Cabinet preset - BC 30cm 1 Door",
+                        "thumbnail":  "BC_30cm_1_Door/BC_30cm_1_Door.png",
+                        "files":  {
+                                      "json":  "BC_30cm_1_Door/BC_30cm_1_Door.json",
+                                      "png":  "BC_30cm_1_Door/BC_30cm_1_Door.png"
+                                  },
+                        "unit":  "cm",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "08b04877-eded-41d0-ac57-18f6f7afa3b2",
+                        "name":  "BC_45cm_1_Door",
+                        "type":  "cabinet",
+                        "cabinet_type":  "base",
+                        "user_created":  false,
+                        "created_at":  "2026-04-14T23:36:11Z",
+                        "dimensions":  "45.0 x 87.0 x 58.0 cm",
+                        "description":  "Cabinet preset - BC 45cm 1 Door",
+                        "thumbnail":  "BC_45cm_1_Door/BC_45cm_1_Door.png",
+                        "files":  {
+                                      "json":  "BC_45cm_1_Door/BC_45cm_1_Door.json",
+                                      "png":  "BC_45cm_1_Door/BC_45cm_1_Door.png"
+                                  },
+                        "unit":  "cm",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "a6dfa68a-380f-45fa-bb08-ed1eb141e4f9",
+                        "name":  "BC_45cm_1_Door_1_Drawer",
+                        "type":  "cabinet",
+                        "cabinet_type":  "base",
+                        "user_created":  false,
+                        "created_at":  "2026-04-14T23:36:17Z",
+                        "dimensions":  "45.0 x 87.0 x 58.0 cm",
+                        "description":  "Cabinet preset - BC 45cm 1 Door 1 Drawer",
+                        "thumbnail":  "BC_45cm_1_Door_1_Drawer/BC_45cm_1_Door_1_Drawer.png",
+                        "files":  {
+                                      "json":  "BC_45cm_1_Door_1_Drawer/BC_45cm_1_Door_1_Drawer.json",
+                                      "png":  "BC_45cm_1_Door_1_Drawer/BC_45cm_1_Door_1_Drawer.png"
+                                  },
+                        "unit":  "cm",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "9609ce1c-d4d3-4340-8c20-470b33ecd9b0",
+                        "name":  "BC_60cm_1_Door",
+                        "type":  "cabinet",
+                        "cabinet_type":  "base",
+                        "user_created":  false,
+                        "created_at":  "2026-04-14T23:36:31Z",
+                        "dimensions":  "60.0 x 87.0 x 58.0 cm",
+                        "description":  "Cabinet preset - BC 60cm 1 Door",
+                        "thumbnail":  "BC_60cm_1_Door/BC_60cm_1_Door.png",
+                        "files":  {
+                                      "json":  "BC_60cm_1_Door/BC_60cm_1_Door.json",
+                                      "png":  "BC_60cm_1_Door/BC_60cm_1_Door.png"
+                                  },
+                        "unit":  "cm",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "a423e607-2eff-4da3-a0a1-8c80cf4d4ce2",
+                        "name":  "BC_60cm_1_Door_1_Drawer",
+                        "type":  "cabinet",
+                        "cabinet_type":  "base",
+                        "user_created":  false,
+                        "created_at":  "2026-04-14T23:36:39Z",
+                        "dimensions":  "60.0 x 87.0 x 58.0 cm",
+                        "description":  "Cabinet preset - BC 60cm 1 Door 1 Drawer",
+                        "thumbnail":  "BC_60cm_1_Door_1_Drawer/BC_60cm_1_Door_1_Drawer.png",
+                        "files":  {
+                                      "json":  "BC_60cm_1_Door_1_Drawer/BC_60cm_1_Door_1_Drawer.json",
+                                      "png":  "BC_60cm_1_Door_1_Drawer/BC_60cm_1_Door_1_Drawer.png"
+                                  },
+                        "unit":  "cm",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "db90804b-cdde-4842-8f4c-28852dba9615",
+                        "name":  "BC_90cm_1_Door",
+                        "type":  "cabinet",
+                        "cabinet_type":  "base",
+                        "user_created":  false,
+                        "created_at":  "2026-04-14T23:37:53Z",
+                        "dimensions":  "90.0 x 87.0 x 58.0 cm",
+                        "description":  "Cabinet preset - BC 90cm 1 Door",
+                        "thumbnail":  "BC_90cm_1_Door/BC_90cm_1_Door.png",
+                        "files":  {
+                                      "json":  "BC_90cm_1_Door/BC_90cm_1_Door.json",
+                                      "png":  "BC_90cm_1_Door/BC_90cm_1_Door.png"
+                                  },
+                        "unit":  "cm",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "286be692-22fb-4bbf-90b8-9eaa58ef7adb",
+                        "name":  "BC_90cm_1_Door_1_Drawer",
+                        "type":  "cabinet",
+                        "cabinet_type":  "base",
+                        "user_created":  false,
+                        "created_at":  "2026-04-14T23:38:00Z",
+                        "dimensions":  "90.0 x 87.0 x 58.0 cm",
+                        "description":  "Cabinet preset - BC 90cm 1 Door 1 Drawer",
+                        "thumbnail":  "BC_90cm_1_Door_1_Drawer/BC_90cm_1_Door_1_Drawer.png",
+                        "files":  {
+                                      "json":  "BC_90cm_1_Door_1_Drawer/BC_90cm_1_Door_1_Drawer.json",
+                                      "png":  "BC_90cm_1_Door_1_Drawer/BC_90cm_1_Door_1_Drawer.png"
+                                  },
+                        "unit":  "cm",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "506ecaf2-c5c3-4e2a-9941-c74346f802b6",
+                        "name":  "BCC_45cm_Blind_Left",
+                        "type":  "cabinet",
+                        "cabinet_type":  "base-corner",
+                        "user_created":  false,
+                        "created_at":  "2026-04-15T09:51:23Z",
+                        "dimensions":  "45.0 x 87.0 x 58.0 cm",
+                        "description":  "Cabinet preset - BCC 45cm Blind Left",
+                        "thumbnail":  "BCC_45cm_Blind_Left/BCC_45cm_Blind_Left.png",
+                        "files":  {
+                                      "json":  "BCC_45cm_Blind_Left/BCC_45cm_Blind_Left.json",
+                                      "png":  "BCC_45cm_Blind_Left/BCC_45cm_Blind_Left.png"
+                                  },
+                        "unit":  "cm",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "4a2bbdd6-6e35-4549-9a7c-6acf9aa6e3a0",
+                        "name":  "BCC_45cm_L-Shaped",
+                        "type":  "cabinet",
+                        "cabinet_type":  "base-corner",
+                        "user_created":  false,
+                        "created_at":  "2026-04-14T23:30:17Z",
+                        "dimensions":  "46.0 x 87.0 x 58.0 cm",
+                        "description":  "Cabinet preset - BCC 45cm L-Shaped",
+                        "thumbnail":  "BCC_45cm_L-Shaped/BCC_45cm_L-Shaped.png",
+                        "files":  {
+                                      "json":  "BCC_45cm_L-Shaped/BCC_45cm_L-Shaped.json",
+                                      "png":  "BCC_45cm_L-Shaped/BCC_45cm_L-Shaped.png"
+                                  },
+                        "unit":  "cm",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "914ecca6-5415-460d-b2ff-7e662bd4bc80",
+                        "name":  "FC_12cm_Base",
+                        "type":  "cabinet",
+                        "cabinet_type":  "filler",
+                        "user_created":  false,
+                        "created_at":  "2026-04-15T10:29:49Z",
+                        "dimensions":  "12.0 x 87.0 x 58.0 cm",
+                        "description":  "Cabinet preset - FC 12cm Base",
+                        "thumbnail":  "FC_12cm_Base/FC_12cm_Base.png",
+                        "files":  {
+                                      "json":  "FC_12cm_Base/FC_12cm_Base.json",
+                                      "png":  "FC_12cm_Base/FC_12cm_Base.png"
+                                  },
+                        "unit":  "cm",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "8a38c42a-4813-4593-89fc-56dd9d1acddb",
+                        "name":  "FC_12cm_High_H_40cm",
+                        "type":  "cabinet",
+                        "cabinet_type":  "filler",
+                        "user_created":  false,
+                        "created_at":  "2026-04-15T10:35:12Z",
+                        "dimensions":  "12.0 x 40.0 x 58.0 cm",
+                        "description":  "Cabinet preset - FC 12cm High H 40cm",
+                        "thumbnail":  "FC_12cm_High_H_40cm/FC_12cm_High_H_40cm.png",
+                        "files":  {
+                                      "json":  "FC_12cm_High_H_40cm/FC_12cm_High_H_40cm.json",
+                                      "png":  "FC_12cm_High_H_40cm/FC_12cm_High_H_40cm.png"
+                                  },
+                        "unit":  "cm",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "0f8408ec-e9f4-4c80-988f-65d6f45d354b",
+                        "name":  "FC_12cm_High_H_50cm",
+                        "type":  "cabinet",
+                        "cabinet_type":  "filler",
+                        "user_created":  false,
+                        "created_at":  "2026-04-15T10:35:58Z",
+                        "dimensions":  "12.0 x 50.0 x 58.0 cm",
+                        "description":  "Cabinet preset - FC 12cm High H 50cm",
+                        "thumbnail":  "FC_12cm_High_H_50cm/FC_12cm_High_H_50cm.png",
+                        "files":  {
+                                      "json":  "FC_12cm_High_H_50cm/FC_12cm_High_H_50cm.json",
+                                      "png":  "FC_12cm_High_H_50cm/FC_12cm_High_H_50cm.png"
+                                  },
+                        "unit":  "cm",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "7fac60b0-6a8e-4490-86a5-c34022b1246b",
+                        "name":  "HC_45cm_1F_H_40cm",
+                        "type":  "cabinet",
+                        "cabinet_type":  "high",
+                        "user_created":  false,
+                        "created_at":  "2026-04-15T10:12:25Z",
+                        "dimensions":  "45.0 x 40.0 x 58.0 cm",
+                        "description":  "Cabinet preset - HC 45cm 1F H 40cm",
+                        "thumbnail":  "HC_45cm_1F_H_40cm/HC_45cm_1F_H_40cm.png",
+                        "files":  {
+                                      "json":  "HC_45cm_1F_H_40cm/HC_45cm_1F_H_40cm.json",
+                                      "png":  "HC_45cm_1F_H_40cm/HC_45cm_1F_H_40cm.png"
+                                  },
+                        "unit":  "cm",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "c0a38873-167e-40ae-8bee-35635b39c214",
+                        "name":  "HC_60cm_1F_H_40cm",
+                        "type":  "cabinet",
+                        "cabinet_type":  "high",
+                        "user_created":  false,
+                        "created_at":  "2026-04-15T10:12:00Z",
+                        "dimensions":  "60.0 x 40.0 x 58.0 cm",
+                        "description":  "Cabinet preset - HC 60cm 1F H 40cm",
+                        "thumbnail":  "HC_60cm_1F_H_40cm/HC_60cm_1F_H_40cm.png",
+                        "files":  {
+                                      "json":  "HC_60cm_1F_H_40cm/HC_60cm_1F_H_40cm.json",
+                                      "png":  "HC_60cm_1F_H_40cm/HC_60cm_1F_H_40cm.png"
+                                  },
+                        "unit":  "cm",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "c7fd4413-a06d-4b35-9bd7-a8026de817c8",
+                        "name":  "HC_90cm_1F_H_40cm",
+                        "type":  "cabinet",
+                        "cabinet_type":  "high",
+                        "user_created":  false,
+                        "created_at":  "2026-04-15T10:12:49Z",
+                        "dimensions":  "90.0 x 40.0 x 58.0 cm",
+                        "description":  "Cabinet preset - HC 90cm 1F H 40cm",
+                        "thumbnail":  "HC_90cm_1F_H_40cm/HC_90cm_1F_H_40cm.png",
+                        "files":  {
+                                      "json":  "HC_90cm_1F_H_40cm/HC_90cm_1F_H_40cm.json",
+                                      "png":  "HC_90cm_1F_H_40cm/HC_90cm_1F_H_40cm.png"
+                                  },
+                        "unit":  "cm",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "0c9560c8-3afc-432a-af85-fb158f07fc78",
+                        "name":  "TC_30cm_1D",
+                        "type":  "cabinet",
+                        "cabinet_type":  "tall",
+                        "user_created":  false,
+                        "created_at":  "2026-04-14T23:46:46Z",
+                        "dimensions":  "30.0 x 225.0 x 58.0 cm",
+                        "description":  "Cabinet preset - TC 30cm 1D",
+                        "thumbnail":  "TC_30cm_1D/TC_30cm_1D.png",
+                        "files":  {
+                                      "json":  "TC_30cm_1D/TC_30cm_1D.json",
+                                      "png":  "TC_30cm_1D/TC_30cm_1D.png"
+                                  },
+                        "unit":  "cm",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "dab9927b-65af-4ec4-91b6-e6e334d49ecb",
+                        "name":  "TC_60cm_1D_3D_Mic",
+                        "type":  "cabinet",
+                        "cabinet_type":  "tall",
+                        "user_created":  false,
+                        "created_at":  "2026-04-14T23:57:39Z",
+                        "dimensions":  "60.0 x 225.0 x 58.0 cm",
+                        "description":  "Cabinet preset - TC 60cm 1D 3D Mic",
+                        "thumbnail":  "TC_60cm_1D_3D_Mic/TC_60cm_1D_3D_Mic.png",
+                        "files":  {
+                                      "json":  "TC_60cm_1D_3D_Mic/TC_60cm_1D_3D_Mic.json",
+                                      "png":  "TC_60cm_1D_3D_Mic/TC_60cm_1D_3D_Mic.png"
+                                  },
+                        "unit":  "cm",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "dc7b1602-a0bb-4779-96a3-5f350bde837e",
+                        "name":  "WC_30cm_1D_H_40cm",
+                        "type":  "cabinet",
+                        "cabinet_type":  "wall",
+                        "user_created":  false,
+                        "created_at":  "2026-04-14T22:20:54Z",
+                        "dimensions":  "30.0 x 40.0 x 30.0 cm",
+                        "description":  "Cabinet preset - WC 30cm 1D H 40cm",
+                        "thumbnail":  "WC_30cm_1D_H_40cm/WC_30cm_1D_H_40cm.png",
+                        "files":  {
+                                      "json":  "WC_30cm_1D_H_40cm/WC_30cm_1D_H_40cm.json",
+                                      "png":  "WC_30cm_1D_H_40cm/WC_30cm_1D_H_40cm.png"
+                                  },
+                        "unit":  "cm",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "2f33f391-4aeb-4c68-b840-9449daddf298",
+                        "name":  "WC_45cm_1D_H_40cm",
+                        "type":  "cabinet",
+                        "cabinet_type":  "wall",
+                        "user_created":  false,
+                        "created_at":  "2026-04-14T23:28:03Z",
+                        "dimensions":  "45.0 x 40.0 x 30.0 cm",
+                        "description":  "Cabinet preset - WC 45cm 1D H 40cm",
+                        "thumbnail":  "WC_45cm_1D_H_40cm/WC_45cm_1D_H_40cm.png",
+                        "files":  {
+                                      "json":  "WC_45cm_1D_H_40cm/WC_45cm_1D_H_40cm.json",
+                                      "png":  "WC_45cm_1D_H_40cm/WC_45cm_1D_H_40cm.png"
+                                  },
+                        "unit":  "cm",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "a10bcd3d-ce2e-4450-a2b6-abae8a6b0073",
+                        "name":  "WC_45cm_BL_H_40cm",
+                        "type":  "cabinet",
+                        "cabinet_type":  "wall-corner",
+                        "user_created":  false,
+                        "created_at":  "2026-04-15T09:52:47Z",
+                        "dimensions":  "45.0 x 40.0 x 30.0 cm",
+                        "description":  "Cabinet preset - WC 45cm BL H 40cm",
+                        "thumbnail":  "WC_45cm_BL_H_40cm/WC_45cm_BL_H_40cm.png",
+                        "files":  {
+                                      "json":  "WC_45cm_BL_H_40cm/WC_45cm_BL_H_40cm.json",
+                                      "png":  "WC_45cm_BL_H_40cm/WC_45cm_BL_H_40cm.png"
+                                  },
+                        "unit":  "cm",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "a39788d2-bcc0-498a-b694-409f7981ba62",
+                        "name":  "WC_45cm_BR_H_40cm",
+                        "type":  "cabinet",
+                        "cabinet_type":  "wall-corner",
+                        "user_created":  false,
+                        "created_at":  "2026-04-15T09:53:26Z",
+                        "dimensions":  "45.0 x 40.0 x 30.0 cm",
+                        "description":  "Cabinet preset - WC 45cm BR H 40cm",
+                        "thumbnail":  "WC_45cm_BR_H_40cm/WC_45cm_BR_H_40cm.png",
+                        "files":  {
+                                      "json":  "WC_45cm_BR_H_40cm/WC_45cm_BR_H_40cm.json",
+                                      "png":  "WC_45cm_BR_H_40cm/WC_45cm_BR_H_40cm.png"
+                                  },
+                        "unit":  "cm",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "fc996806-0d68-4c26-96bb-10e2af4e7928",
+                        "name":  "WC_45cm_L-Shaped_H_40cm",
+                        "type":  "cabinet",
+                        "cabinet_type":  "wall-corner",
+                        "user_created":  false,
+                        "created_at":  "2026-04-15T08:21:42Z",
+                        "dimensions":  "45.0 x 40.0 x 30.0 cm",
+                        "description":  "Cabinet preset - WC 45cm L-Shaped H 40cm",
+                        "thumbnail":  "WC_45cm_L-Shaped_H_40cm/WC_45cm_L-Shaped_H_40cm.png",
+                        "files":  {
+                                      "json":  "WC_45cm_L-Shaped_H_40cm/WC_45cm_L-Shaped_H_40cm.json",
+                                      "png":  "WC_45cm_L-Shaped_H_40cm/WC_45cm_L-Shaped_H_40cm.png"
+                                  },
+                        "unit":  "cm",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "e40da0ab-8285-4b4c-9d30-7bf17e80d505",
+                        "name":  "WC_60cm_1F_H_40cm",
+                        "type":  "cabinet",
+                        "cabinet_type":  "wall",
+                        "user_created":  false,
+                        "created_at":  "2026-04-14T23:29:10Z",
+                        "dimensions":  "60.0 x 40.0 x 30.0 cm",
+                        "description":  "Cabinet preset - WC 60cm 1F H 40cm",
+                        "thumbnail":  "WC_60cm_1F_H_40cm/WC_60cm_1F_H_40cm.png",
+                        "files":  {
+                                      "json":  "WC_60cm_1F_H_40cm/WC_60cm_1F_H_40cm.json",
+                                      "png":  "WC_60cm_1F_H_40cm/WC_60cm_1F_H_40cm.png"
+                                  },
+                        "unit":  "cm",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "1119b943-eaf4-44d4-9e97-b918dd3118e2",
+                        "name":  "WC_75cm_1F_H_40cm",
+                        "type":  "cabinet",
+                        "cabinet_type":  "wall",
+                        "user_created":  false,
+                        "created_at":  "2026-04-14T23:43:24Z",
+                        "dimensions":  "75.0 x 40.0 x 30.0 cm",
+                        "description":  "Cabinet preset - WC 75cm 1F H 40cm",
+                        "thumbnail":  "WC_75cm_1F_H_40cm/WC_75cm_1F_H_40cm.png",
+                        "files":  {
+                                      "json":  "WC_75cm_1F_H_40cm/WC_75cm_1F_H_40cm.json",
+                                      "png":  "WC_75cm_1F_H_40cm/WC_75cm_1F_H_40cm.png"
+                                  },
+                        "unit":  "cm",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "8cec720b-d04d-42a4-87ee-1a2a2a1e10d1",
+                        "name":  "BC_12in_1_Door",
+                        "type":  "cabinet",
+                        "cabinet_type":  "base",
+                        "user_created":  false,
+                        "created_at":  "2026-04-25T18:05:20Z",
+                        "dimensions":  "12\" x 34.5\" x 24\"",
+                        "description":  "Cabinet preset - BC 12in 1 Door",
+                        "thumbnail":  "BC_12in_1_Door/BC_12in_1_Door.png",
+                        "files":  {
+                                      "json":  "BC_12in_1_Door/BC_12in_1_Door.json",
+                                      "png":  "BC_12in_1_Door/BC_12in_1_Door.png"
+                                  },
+                        "unit":  "in",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "c7465132-2f68-4240-b83d-d15e896c70c9",
+                        "name":  "BC_18in_1_Door",
+                        "type":  "cabinet",
+                        "cabinet_type":  "base",
+                        "user_created":  false,
+                        "created_at":  "2026-04-25T18:05:20Z",
+                        "dimensions":  "18\" x 34.5\" x 24\"",
+                        "description":  "Cabinet preset - BC 18in 1 Door",
+                        "thumbnail":  "BC_18in_1_Door/BC_18in_1_Door.png",
+                        "files":  {
+                                      "json":  "BC_18in_1_Door/BC_18in_1_Door.json",
+                                      "png":  "BC_18in_1_Door/BC_18in_1_Door.png"
+                                  },
+                        "unit":  "in",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "c65405e1-5bdd-4f31-b5b9-f80474961803",
+                        "name":  "BC_18in_1_Door_1_Drawer",
+                        "type":  "cabinet",
+                        "cabinet_type":  "base",
+                        "user_created":  false,
+                        "created_at":  "2026-04-25T18:05:20Z",
+                        "dimensions":  "18\" x 34.5\" x 24\"",
+                        "description":  "Cabinet preset - BC 18in 1 Door 1 Drawer",
+                        "thumbnail":  "BC_18in_1_Door_1_Drawer/BC_18in_1_Door_1_Drawer.png",
+                        "files":  {
+                                      "json":  "BC_18in_1_Door_1_Drawer/BC_18in_1_Door_1_Drawer.json",
+                                      "png":  "BC_18in_1_Door_1_Drawer/BC_18in_1_Door_1_Drawer.png"
+                                  },
+                        "unit":  "in",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "7d68b8c0-294b-4d42-a38b-0cc1e22d28f0",
+                        "name":  "BC_24in_1_Door",
+                        "type":  "cabinet",
+                        "cabinet_type":  "base",
+                        "user_created":  false,
+                        "created_at":  "2026-04-25T18:05:20Z",
+                        "dimensions":  "24\" x 34.5\" x 24\"",
+                        "description":  "Cabinet preset - BC 24in 1 Door",
+                        "thumbnail":  "BC_24in_1_Door/BC_24in_1_Door.png",
+                        "files":  {
+                                      "json":  "BC_24in_1_Door/BC_24in_1_Door.json",
+                                      "png":  "BC_24in_1_Door/BC_24in_1_Door.png"
+                                  },
+                        "unit":  "in",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "fbc6c49c-4faa-443b-89f5-ffae3e8fbda1",
+                        "name":  "BC_24in_1_Door_1_Drawer",
+                        "type":  "cabinet",
+                        "cabinet_type":  "base",
+                        "user_created":  false,
+                        "created_at":  "2026-04-25T18:05:20Z",
+                        "dimensions":  "24\" x 34.5\" x 24\"",
+                        "description":  "Cabinet preset - BC 24in 1 Door 1 Drawer",
+                        "thumbnail":  "BC_24in_1_Door_1_Drawer/BC_24in_1_Door_1_Drawer.png",
+                        "files":  {
+                                      "json":  "BC_24in_1_Door_1_Drawer/BC_24in_1_Door_1_Drawer.json",
+                                      "png":  "BC_24in_1_Door_1_Drawer/BC_24in_1_Door_1_Drawer.png"
+                                  },
+                        "unit":  "in",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "9d090e30-bb4b-48e2-8574-68647e12005a",
+                        "name":  "BC_36in_1_Door",
+                        "type":  "cabinet",
+                        "cabinet_type":  "base",
+                        "user_created":  false,
+                        "created_at":  "2026-04-25T18:05:20Z",
+                        "dimensions":  "36\" x 34.5\" x 24\"",
+                        "description":  "Cabinet preset - BC 36in 1 Door",
+                        "thumbnail":  "BC_36in_1_Door/BC_36in_1_Door.png",
+                        "files":  {
+                                      "json":  "BC_36in_1_Door/BC_36in_1_Door.json",
+                                      "png":  "BC_36in_1_Door/BC_36in_1_Door.png"
+                                  },
+                        "unit":  "in",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "dca6e798-cd8d-4701-aa68-4545cf5c13ec",
+                        "name":  "BC_36in_1_Door_1_Drawer",
+                        "type":  "cabinet",
+                        "cabinet_type":  "base",
+                        "user_created":  false,
+                        "created_at":  "2026-04-25T18:05:20Z",
+                        "dimensions":  "36\" x 34.5\" x 24\"",
+                        "description":  "Cabinet preset - BC 36in 1 Door 1 Drawer",
+                        "thumbnail":  "BC_36in_1_Door_1_Drawer/BC_36in_1_Door_1_Drawer.png",
+                        "files":  {
+                                      "json":  "BC_36in_1_Door_1_Drawer/BC_36in_1_Door_1_Drawer.json",
+                                      "png":  "BC_36in_1_Door_1_Drawer/BC_36in_1_Door_1_Drawer.png"
+                                  },
+                        "unit":  "in",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "7b85d8a6-7095-453b-95c9-0a81d41e871d",
+                        "name":  "BCC_18in_Blind_Left",
+                        "type":  "cabinet",
+                        "cabinet_type":  "base-corner",
+                        "user_created":  false,
+                        "created_at":  "2026-04-25T18:05:20Z",
+                        "dimensions":  "18\" x 34.5\" x 24\"",
+                        "description":  "Cabinet preset - BCC 18in Blind Left",
+                        "thumbnail":  "BCC_18in_Blind_Left/BCC_18in_Blind_Left.png",
+                        "files":  {
+                                      "json":  "BCC_18in_Blind_Left/BCC_18in_Blind_Left.json",
+                                      "png":  "BCC_18in_Blind_Left/BCC_18in_Blind_Left.png"
+                                  },
+                        "unit":  "in",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "16d5cf26-08d6-4c8f-8e9f-58e72a705c61",
+                        "name":  "BCC_18in_L-Shaped",
+                        "type":  "cabinet",
+                        "cabinet_type":  "base-corner",
+                        "user_created":  false,
+                        "created_at":  "2026-04-25T18:05:20Z",
+                        "dimensions":  "18\" x 34.5\" x 24\"",
+                        "description":  "Cabinet preset - BCC 18in L-Shaped",
+                        "thumbnail":  "BCC_18in_L-Shaped/BCC_18in_L-Shaped.png",
+                        "files":  {
+                                      "json":  "BCC_18in_L-Shaped/BCC_18in_L-Shaped.json",
+                                      "png":  "BCC_18in_L-Shaped/BCC_18in_L-Shaped.png"
+                                  },
+                        "unit":  "in",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "cf5f4f93-a812-44bc-a4db-3bfc12873fe6",
+                        "name":  "FC_5in_Base",
+                        "type":  "cabinet",
+                        "cabinet_type":  "filler",
+                        "user_created":  false,
+                        "created_at":  "2026-04-25T18:05:20Z",
+                        "dimensions":  "5\" x 34.5\" x 24\"",
+                        "description":  "Cabinet preset - FC 5in Base",
+                        "thumbnail":  "FC_5in_Base/FC_5in_Base.png",
+                        "files":  {
+                                      "json":  "FC_5in_Base/FC_5in_Base.json",
+                                      "png":  "FC_5in_Base/FC_5in_Base.png"
+                                  },
+                        "unit":  "in",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "a25b6332-1da5-49c8-93c7-ab3c4cfb0bc0",
+                        "name":  "FC_5in_High_H_16in",
+                        "type":  "cabinet",
+                        "cabinet_type":  "filler",
+                        "user_created":  false,
+                        "created_at":  "2026-04-25T18:05:20Z",
+                        "dimensions":  "5\" x 16\" x 24\"",
+                        "description":  "Cabinet preset - FC 5in High H 16in",
+                        "thumbnail":  "FC_5in_High_H_16in/FC_5in_High_H_16in.png",
+                        "files":  {
+                                      "json":  "FC_5in_High_H_16in/FC_5in_High_H_16in.json",
+                                      "png":  "FC_5in_High_H_16in/FC_5in_High_H_16in.png"
+                                  },
+                        "unit":  "in",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "5b895d5f-ca99-4098-93b4-3abc195663e9",
+                        "name":  "FC_5in_High_H_20in",
+                        "type":  "cabinet",
+                        "cabinet_type":  "filler",
+                        "user_created":  false,
+                        "created_at":  "2026-04-25T18:05:20Z",
+                        "dimensions":  "5\" x 20\" x 24\"",
+                        "description":  "Cabinet preset - FC 5in High H 20in",
+                        "thumbnail":  "FC_5in_High_H_20in/FC_5in_High_H_20in.png",
+                        "files":  {
+                                      "json":  "FC_5in_High_H_20in/FC_5in_High_H_20in.json",
+                                      "png":  "FC_5in_High_H_20in/FC_5in_High_H_20in.png"
+                                  },
+                        "unit":  "in",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "9b97b311-0d22-4168-98f5-7db45af5a81f",
+                        "name":  "HC_18in_1F_H_16in",
+                        "type":  "cabinet",
+                        "cabinet_type":  "high",
+                        "user_created":  false,
+                        "created_at":  "2026-04-25T18:05:20Z",
+                        "dimensions":  "18\" x 16\" x 24\"",
+                        "description":  "Cabinet preset - HC 18in 1F H 16in",
+                        "thumbnail":  "HC_18in_1F_H_16in/HC_18in_1F_H_16in.png",
+                        "files":  {
+                                      "json":  "HC_18in_1F_H_16in/HC_18in_1F_H_16in.json",
+                                      "png":  "HC_18in_1F_H_16in/HC_18in_1F_H_16in.png"
+                                  },
+                        "unit":  "in",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "0729a164-e3d7-49fa-bc8a-ee5c81a3d192",
+                        "name":  "HC_24in_1F_H_16in",
+                        "type":  "cabinet",
+                        "cabinet_type":  "high",
+                        "user_created":  false,
+                        "created_at":  "2026-04-25T18:05:20Z",
+                        "dimensions":  "24\" x 16\" x 24\"",
+                        "description":  "Cabinet preset - HC 24in 1F H 16in",
+                        "thumbnail":  "HC_24in_1F_H_16in/HC_24in_1F_H_16in.png",
+                        "files":  {
+                                      "json":  "HC_24in_1F_H_16in/HC_24in_1F_H_16in.json",
+                                      "png":  "HC_24in_1F_H_16in/HC_24in_1F_H_16in.png"
+                                  },
+                        "unit":  "in",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "b3dc502f-93b7-42ea-9164-4480d0d3cafb",
+                        "name":  "HC_36in_1F_H_16in",
+                        "type":  "cabinet",
+                        "cabinet_type":  "high",
+                        "user_created":  false,
+                        "created_at":  "2026-04-25T18:05:20Z",
+                        "dimensions":  "36\" x 16\" x 24\"",
+                        "description":  "Cabinet preset - HC 36in 1F H 16in",
+                        "thumbnail":  "HC_36in_1F_H_16in/HC_36in_1F_H_16in.png",
+                        "files":  {
+                                      "json":  "HC_36in_1F_H_16in/HC_36in_1F_H_16in.json",
+                                      "png":  "HC_36in_1F_H_16in/HC_36in_1F_H_16in.png"
+                                  },
+                        "unit":  "in",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "8cd21109-b126-4fb1-af50-49955b30fee0",
+                        "name":  "TC_12in_1D",
+                        "type":  "cabinet",
+                        "cabinet_type":  "tall",
+                        "user_created":  false,
+                        "created_at":  "2026-04-25T18:05:20Z",
+                        "dimensions":  "12\" x 90\" x 24\"",
+                        "description":  "Cabinet preset - TC 12in 1D",
+                        "thumbnail":  "TC_12in_1D/TC_12in_1D.png",
+                        "files":  {
+                                      "json":  "TC_12in_1D/TC_12in_1D.json",
+                                      "png":  "TC_12in_1D/TC_12in_1D.png"
+                                  },
+                        "unit":  "in",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "70b0b4a3-a0b5-44bb-b6fa-12197faf1bbb",
+                        "name":  "TC_24in_1D_3D_Mic",
+                        "type":  "cabinet",
+                        "cabinet_type":  "tall",
+                        "user_created":  false,
+                        "created_at":  "2026-04-25T18:05:20Z",
+                        "dimensions":  "24\" x 90\" x 24\"",
+                        "description":  "Cabinet preset - TC 24in 1D 3D Mic",
+                        "thumbnail":  "TC_24in_1D_3D_Mic/TC_24in_1D_3D_Mic.png",
+                        "files":  {
+                                      "json":  "TC_24in_1D_3D_Mic/TC_24in_1D_3D_Mic.json",
+                                      "png":  "TC_24in_1D_3D_Mic/TC_24in_1D_3D_Mic.png"
+                                  },
+                        "unit":  "in",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "04b53ed0-3bae-4110-9315-c57c322dba8f",
+                        "name":  "WC_12in_1D_H_16in",
+                        "type":  "cabinet",
+                        "cabinet_type":  "wall",
+                        "user_created":  false,
+                        "created_at":  "2026-04-25T18:05:20Z",
+                        "dimensions":  "12\" x 16\" x 12\"",
+                        "description":  "Cabinet preset - WC 12in 1D H 16in",
+                        "thumbnail":  "WC_12in_1D_H_16in/WC_12in_1D_H_16in.png",
+                        "files":  {
+                                      "json":  "WC_12in_1D_H_16in/WC_12in_1D_H_16in.json",
+                                      "png":  "WC_12in_1D_H_16in/WC_12in_1D_H_16in.png"
+                                  },
+                        "unit":  "in",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "5897453d-e85d-4fa1-a474-6c79d709a35a",
+                        "name":  "WC_12in_Dec_H_16in",
+                        "type":  "cabinet",
+                        "cabinet_type":  "wall",
+                        "user_created":  false,
+                        "created_at":  "2026-04-25T18:05:20Z",
+                        "dimensions":  "12\" x 16\" x 12\"",
+                        "description":  "Cabinet preset - WC 12in Dec H 16in",
+                        "thumbnail":  "WC_12in_Dec_H_16in/WC_12in_Dec_H_16in.png",
+                        "files":  {
+                                      "json":  "WC_12in_Dec_H_16in/WC_12in_Dec_H_16in.json",
+                                      "png":  "WC_12in_Dec_H_16in/WC_12in_Dec_H_16in.png"
+                                  },
+                        "unit":  "in",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "11bc0012-0cdf-48a9-baf2-babe6d09de2d",
+                        "name":  "WC_18in_1D_H_16in",
+                        "type":  "cabinet",
+                        "cabinet_type":  "wall",
+                        "user_created":  false,
+                        "created_at":  "2026-04-25T18:05:20Z",
+                        "dimensions":  "18\" x 16\" x 12\"",
+                        "description":  "Cabinet preset - WC 18in 1D H 16in",
+                        "thumbnail":  "WC_18in_1D_H_16in/WC_18in_1D_H_16in.png",
+                        "files":  {
+                                      "json":  "WC_18in_1D_H_16in/WC_18in_1D_H_16in.json",
+                                      "png":  "WC_18in_1D_H_16in/WC_18in_1D_H_16in.png"
+                                  },
+                        "unit":  "in",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "b7f5fbf4-77e2-4703-88a8-1b61d9db45e3",
+                        "name":  "WC_18in_BL_H_16in",
+                        "type":  "cabinet",
+                        "cabinet_type":  "wall-corner",
+                        "user_created":  false,
+                        "created_at":  "2026-04-25T18:05:20Z",
+                        "dimensions":  "18\" x 16\" x 12\"",
+                        "description":  "Cabinet preset - WC 18in BL H 16in",
+                        "thumbnail":  "WC_18in_BL_H_16in/WC_18in_BL_H_16in.png",
+                        "files":  {
+                                      "json":  "WC_18in_BL_H_16in/WC_18in_BL_H_16in.json",
+                                      "png":  "WC_18in_BL_H_16in/WC_18in_BL_H_16in.png"
+                                  },
+                        "unit":  "in",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "826d821f-4685-4355-ba3c-02e9ab947e54",
+                        "name":  "WC_18in_BR_H_16in",
+                        "type":  "cabinet",
+                        "cabinet_type":  "wall-corner",
+                        "user_created":  false,
+                        "created_at":  "2026-04-25T18:05:20Z",
+                        "dimensions":  "18\" x 16\" x 12\"",
+                        "description":  "Cabinet preset - WC 18in BR H 16in",
+                        "thumbnail":  "WC_18in_BR_H_16in/WC_18in_BR_H_16in.png",
+                        "files":  {
+                                      "json":  "WC_18in_BR_H_16in/WC_18in_BR_H_16in.json",
+                                      "png":  "WC_18in_BR_H_16in/WC_18in_BR_H_16in.png"
+                                  },
+                        "unit":  "in",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "61348433-fac4-40b3-a522-bef21df04915",
+                        "name":  "WC_18in_Dec_H_16in",
+                        "type":  "cabinet",
+                        "cabinet_type":  "wall",
+                        "user_created":  false,
+                        "created_at":  "2026-04-25T18:05:20Z",
+                        "dimensions":  "18\" x 16\" x 12\"",
+                        "description":  "Cabinet preset - WC 18in Dec H 16in",
+                        "thumbnail":  "WC_18in_Dec_H_16in/WC_18in_Dec_H_16in.png",
+                        "files":  {
+                                      "json":  "WC_18in_Dec_H_16in/WC_18in_Dec_H_16in.json",
+                                      "png":  "WC_18in_Dec_H_16in/WC_18in_Dec_H_16in.png"
+                                  },
+                        "unit":  "in",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "0ceff9a2-7130-4338-93aa-3ef50b5705ba",
+                        "name":  "WC_18in_L-Shaped_H_16in",
+                        "type":  "cabinet",
+                        "cabinet_type":  "wall-corner",
+                        "user_created":  false,
+                        "created_at":  "2026-04-25T18:05:20Z",
+                        "dimensions":  "18\" x 16\" x 12\"",
+                        "description":  "Cabinet preset - WC 18in L-Shaped H 16in",
+                        "thumbnail":  "WC_18in_L-Shaped_H_16in/WC_18in_L-Shaped_H_16in.png",
+                        "files":  {
+                                      "json":  "WC_18in_L-Shaped_H_16in/WC_18in_L-Shaped_H_16in.json",
+                                      "png":  "WC_18in_L-Shaped_H_16in/WC_18in_L-Shaped_H_16in.png"
+                                  },
+                        "unit":  "in",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "76127c6b-905c-43ca-9cd4-299d4e512268",
+                        "name":  "WC_24in_1F_H_16in",
+                        "type":  "cabinet",
+                        "cabinet_type":  "wall",
+                        "user_created":  false,
+                        "created_at":  "2026-04-25T18:05:20Z",
+                        "dimensions":  "24\" x 16\" x 12\"",
+                        "description":  "Cabinet preset - WC 24in 1F H 16in",
+                        "thumbnail":  "WC_24in_1F_H_16in/WC_24in_1F_H_16in.png",
+                        "files":  {
+                                      "json":  "WC_24in_1F_H_16in/WC_24in_1F_H_16in.json",
+                                      "png":  "WC_24in_1F_H_16in/WC_24in_1F_H_16in.png"
+                                  },
+                        "unit":  "in",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "b85b7cf3-7dbe-42b8-96cf-549d778e51bc",
+                        "name":  "WC_24in_Dec_H_16in",
+                        "type":  "cabinet",
+                        "cabinet_type":  "wall",
+                        "user_created":  false,
+                        "created_at":  "2026-04-25T18:05:20Z",
+                        "dimensions":  "24\" x 16\" x 12\"",
+                        "description":  "Cabinet preset - WC 24in Dec H 16in",
+                        "thumbnail":  "WC_24in_Dec_H_16in/WC_24in_Dec_H_16in.png",
+                        "files":  {
+                                      "json":  "WC_24in_Dec_H_16in/WC_24in_Dec_H_16in.json",
+                                      "png":  "WC_24in_Dec_H_16in/WC_24in_Dec_H_16in.png"
+                                  },
+                        "unit":  "in",
+                        "tier":  "trial"
+                    },
+                    {
+                        "id":  "b5a679db-d2b9-4f37-9b13-01097238f4f0",
+                        "name":  "WC_30in_1F_H_16in",
+                        "type":  "cabinet",
+                        "cabinet_type":  "wall",
+                        "user_created":  false,
+                        "created_at":  "2026-04-25T18:05:20Z",
+                        "dimensions":  "30\" x 16\" x 12\"",
+                        "description":  "Cabinet preset - WC 30in 1F H 16in",
+                        "thumbnail":  "WC_30in_1F_H_16in/WC_30in_1F_H_16in.png",
+                        "files":  {
+                                      "json":  "WC_30in_1F_H_16in/WC_30in_1F_H_16in.json",
+                                      "png":  "WC_30in_1F_H_16in/WC_30in_1F_H_16in.png"
+                                  },
+                        "unit":  "in",
+                        "tier":  "trial"
+                    }
+                ]
+}

@@ -1,0 +1,19 @@
+/*
+ * Minimal Font Awesome fallback.
+ *
+ * The user manual can reference Font Awesome classes from generated content.
+ * Keeping this file present prevents WebDialog file-not-found errors in the
+ * packaged extension when no icon font bundle is shipped.
+ */
+
+.fa,
+.fas,
+.far,
+.fab {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+}
+

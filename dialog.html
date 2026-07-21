@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>Smart Kitchen Builder</title>
+<style>
+  :root{
+    --bg:#1e1f24; --panel:#2a2b32; --accent:#d99a3f; --text:#eee; --muted:#9a9ba3;
+    --ok:#4caf80; --err:#e05656; --warn:#e0a656;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Segoe UI",Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text);font-size:13px}
+  .tabs{display:flex;background:var(--panel);border-bottom:1px solid #000}
+  .tab{flex:1;padding:10px 4px;text-align:center;cursor:pointer;color:var(--muted)}
+  .tab.active{color:var(--accent);border-bottom:2px solid var(--accent)}
+  .page{display:none;padding:14px}
+  .page.active{display:block}
+  label{display:block;margin:8px 0 3px;color:var(--muted)}
+  input[type=number],input[type=text],select{
+    width:100%;padding:6px;border-radius:5px;border:1px solid #444;background:#1a1b1f;color:var(--text)
+  }
+  .row{display:flex;gap:8px}
+  .row > div{flex:1}
+  button{
+    margin-top:14px;width:100%;padding:9px;border:none;border-radius:6px;
+    background:var(--accent);color:#1a1b1f;font-weight:bold;cursor:pointer
+  }
+  button.secondary{background:#3a3b42;color:var(--text)}
+  .checkbox-row{display:flex;align-items:center;gap:6px;margin-top:10px}
+  .checkbox-row input{width:auto}
+  table{width:100%;border-collapse:collapse;margin-top:10px;font-size:11px}
+  th,td{border:1px solid #3a3b42;padding:4px;text-align:right}
+  th{background:var(--panel)}
+  .issue{padding:6px;border-radius:4px;margin-bottom:5px}
+  .issue.error{background:rgba(224,86,86,.15);border-right:3px solid var(--err)}
+  .issue.warning{background:rgba(224,166,86,.15);border-right:3px solid var(--warn)}
+  .status{margin-top:8px;font-size:12px;color:var(--muted)}
+  .price-box{background:var(--panel);padding:10px;border-radius:6px;margin-top:10px}
+  .price-box b{color:var(--accent)}
+</style>
+</head>
+<body>
+
+<div class="tabs">
+  <div class="tab active" data-page="builder">مصمم الكبائن</div>
+  <div class="tab" data-page="cutlist">Cut List</div>
+  <div class="tab" data-page="radar">رادار الأخطاء</div>
+  <div class="tab" data-page="settings">إعدادات المصنع</div>
+</div>
+
+<!-- ===================== Cabinet Builder ===================== -->
+<div class="page active" id="page-builder">
+  <label>اسم الوحدة</label>
+  <input type="text" id="c_name" placeholder="مثال: خزانة أرضية 1">
+
+  <div class="row">
+    <div><label>العرض (مم)</label><input type="number" id="c_width" value="600"></div>
+    <div><label>الارتفاع (مم)</label><input type="number" id="c_height" value="720"></div>
+    <div><label>العمق (مم)</label><input type="number" id="c_depth" value="560"></div>
+  </div>
+
+  <label>نوع الواجهة</label>
+  <select id="c_facade">
+    <option value="plain">سادة</option>
+    <option value="modern">مودرن</option>
+    <option value="classic">كلاسيك</option>
+    <option value="glass">زجاج</option>
+  </select>
+
+  <label>عدد الأرفف الداخلية</label>
+  <input type="number" id="c_shelves" value="1">
+
+  <div class="checkbox-row">
+    <input type="checkbox" id="c_led">
+    <label style="margin:0">إضافة ليد (LED)</label>
+  </div>
+
+  <button onclick="buildCabinet()">إنشاء الكابينة</button>
+  <div class="status" id="builder_status"></div>
+</div>
+
+<!-- ===================== Cut List ===================== -->
+<div class="page" id="page-cutlist">
+  <button onclick="loadCutlist()">تحديث القائمة</button>
+  <button class="secondary" onclick="exportCsv()">تصدير CSV</button>
+  <table id="cutlist_table">
+    <thead><tr><th>الاسم</th><th>طول</th><th>عرض</th><th>سماكة</th><th>الخامة</th><th>الكمية</th></tr></thead>
+    <tbody></tbody>
+  </table>
+  <div class="price-box" id="price_box">اضغط "تحديث القائمة" لعرض التكلفة التقديرية</div>
+  <div class="status" id="cutlist_status"></div>
+</div>
+
+<!-- ===================== Design Radar ===================== -->
+<div class="page" id="page-radar">
+  <button onclick="runRadar()">فحص الموديل الآن</button>
+  <div id="radar_results" style="margin-top:10px"></div>
+</div>
+
+<!-- ===================== Settings ===================== -->
+<div class="page" id="page-settings">
+  <div class="row">
+    <div><label>سماكة الخشب (مم)</label><input type="number" id="s_panel_thickness_mm"></div>
+    <div><label>سماكة الظهر (مم)</label><input type="number" id="s_back_thickness_mm"></div>
+  </div>
+  <div class="row">
+    <div><label>خلوص الأبواب (مم)</label><input type="number" id="s_door_gap_mm"></div>
+    <div>
+      <label>طريقة تركيب الظهر</label>
+      <select id="s_back_method"><option value="groove">فريزة (Groove)</option><option value="flat">سطحي (Flat)</option></select>
+    </div>
+  </div>
+  <div class="row">
+    <div><label>طول اللوح (مم)</label><input type="number" id="s_sheet_length_mm"></div>
+    <div><label>عرض اللوح (مم)</label><input type="number" id="s_sheet_width_mm"></div>
+  </div>
+  <div class="row">
+    <div><label>سعر المتر² للخامة</label><input type="number" id="s_material_price_per_sqm"></div>
+    <div><label>سعر ساعة/قطعة العمل</label><input type="number" id="s_labor_price_per_unit"></div>
+  </div>
+  <label>العملة</label>
+  <input type="text" id="s_currency">
+  <button onclick="saveSettings()">حفظ الإعدادات</button>
+  <div class="status" id="settings_status"></div>
+</div>
+
+<script>
+// ---------- Tabs ----------
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('page-' + tab.dataset.page).classList.add('active');
+  });
+});
+
+// ---------- Cabinet Builder ----------
+function buildCabinet(){
+  const payload = {
+    name: document.getElementById('c_name').value,
+    width_mm: Number(document.getElementById('c_width').value),
+    height_mm: Number(document.getElementById('c_height').value),
+    depth_mm: Number(document.getElementById('c_depth').value),
+    facade: document.getElementById('c_facade').value,
+    shelves: Number(document.getElementById('c_shelves').value),
+    led: document.getElementById('c_led').checked
+  };
+  document.getElementById('builder_status').innerText = 'جارِ الإنشاء...';
+  sketchup.build_cabinet(JSON.stringify(payload));
+}
+function mhResult(res){
+  const st = document.getElementById('builder_status');
+  if(st) st.innerText = res.ok ? 'تم الإنشاء بنجاح ✅' : ('خطأ: ' + res.error);
+  const cst = document.getElementById('cutlist_status');
+  if(res.path && cst) cst.innerText = 'تم الحفظ في: ' + res.path;
+}
+
+// ---------- Cut List ----------
+function loadCutlist(){
+  sketchup.get_cutlist();
+  sketchup.get_price();
+}
+function mhCutlistResult(rows){
+  const tbody = document.querySelector('#cutlist_table tbody');
+  tbody.innerHTML = '';
+  rows.forEach(r => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${r.name||''}</td><td>${r.length_mm||''}</td><td>${r.width_mm||''}</td><td>${r.thickness_mm||''}</td><td>${r.material||''}</td><td>${r.qty||''}</td>`;
+    tbody.appendChild(tr);
+  });
+}
+function mhPriceResult(p){
+  document.getElementById('price_box').innerHTML =
+    `المساحة الكلية: <b>${p.total_area_sqm} م²</b> — عدد القطع: <b>${p.total_pieces}</b><br>
+     تكلفة الخامة: <b>${p.material_cost} ${p.currency}</b> — تكلفة العمالة: <b>${p.labor_cost} ${p.currency}</b><br>
+     الإجمالي التقديري: <b>${p.total_cost} ${p.currency}</b>`;
+}
+function exportCsv(){ sketchup.export_csv(); }
+
+// ---------- Design Radar ----------
+function runRadar(){
+  document.getElementById('radar_results').innerHTML = 'جارِ الفحص...';
+  sketchup.run_radar();
+}
+function mhRadarResult(issues){
+  const box = document.getElementById('radar_results');
+  if(issues.length === 0){ box.innerHTML = '<div class="issue" style="border-color:#4caf80">لا توجد أخطاء ✅</div>'; return; }
+  box.innerHTML = issues.map(i => `<div class="issue ${i.severity}">${i.message}</div>`).join('');
+}
+
+// ---------- Settings ----------
+function loadSettingsForm(s){
+  Object.keys(s).forEach(k => {
+    const el = document.getElementById('s_' + k);
+    if(el) el.value = s[k];
+  });
+}
+function mhSettingsResult(s){ loadSettingsForm(s); document.getElementById('settings_status').innerText='محدّث'; }
+function saveSettings(){
+  const ids = ['panel_thickness_mm','back_thickness_mm','door_gap_mm','back_method',
+               'sheet_length_mm','sheet_width_mm','material_price_per_sqm','labor_price_per_unit','currency'];
+  const payload = {};
+  ids.forEach(k => { const el = document.getElementById('s_'+k); if(el) payload[k] = el.value; });
+  sketchup.save_settings(JSON.stringify(payload));
+  document.getElementById('settings_status').innerText = 'جارِ الحفظ...';
+}
+
+// initial load
+window.onload = () => { sketchup.get_settings(); };
+</script>
+</body>
+</html>
